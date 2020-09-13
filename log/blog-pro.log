@@ -1,0 +1,4 @@
+2020-09-07 11:55:28.923  INFO 1656 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication on 老七的computer with PID 1656 (C:\Users\孙悦\Desktop\核心篇代码\syblog\target\classes started by 孙悦 in C:\Users\孙悦\Desktop\核心篇代码\syblog)
+2020-09-07 11:55:28.926  INFO 1656 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: pro
+2020-09-07 11:55:30.386  WARN 1656 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-07 11:55:30.737  INFO 1656 --- [main] com.sunyue.syblog.SyblogApplication      : Started SyblogApplication in 2.265 seconds (JVM running for 3.168)

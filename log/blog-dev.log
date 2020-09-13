@@ -1,0 +1,81 @@
+2020-09-13 14:40:09.546  INFO 9856 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication on 老七的computer with PID 9856 (C:\Users\孙悦\Desktop\核心篇代码\syblog\target\classes started by 孙悦 in C:\Users\孙悦\Desktop\核心篇代码\syblog)
+2020-09-13 14:40:09.554 DEBUG 9856 --- [main] com.sunyue.syblog.SyblogApplication      : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-13 14:40:09.554  INFO 9856 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: dev
+2020-09-13 14:40:11.484  INFO 9856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-13 14:40:11.668  INFO 9856 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146ms. Found 4 JPA repository interfaces.
+2020-09-13 14:40:13.066  INFO 9856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-13 14:40:13.090  INFO 9856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-13 14:40:13.090  INFO 9856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-13 14:40:13.094  INFO 9856 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-13 14:40:13.094  INFO 9856 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-13 14:40:13.094  INFO 9856 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-13 14:40:13.189  INFO 9856 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-13 14:40:13.389  INFO 9856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-13 14:40:13.393  INFO 9856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3675 ms
+2020-09-13 14:40:13.980  INFO 9856 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-13 14:40:14.144  INFO 9856 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-13 14:40:14.416  INFO 9856 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-13 14:40:14.420  WARN 9856 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-13 14:40:15.015  INFO 9856 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-13 14:40:15.283  INFO 9856 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-13 14:40:15.762  INFO 9856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-13 14:40:15.766  INFO 9856 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-09-13 14:40:18.542  INFO 9856 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-13 14:40:18.630  INFO 9856 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-13 14:40:20.739  INFO 9856 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-13 14:40:20.779  INFO 9856 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13 14:40:21.734  INFO 9856 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-13 14:40:21.770  INFO 9856 --- [main] com.sunyue.syblog.SyblogApplication      : Started SyblogApplication in 13.289 seconds (JVM running for 16.171)
+2020-09-13 14:40:26.208  INFO 9856 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1599814300,1599814689,1599874298] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-13 14:40:26.228  INFO 9856 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-13 14:40:26.228  INFO 9856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-13 14:40:26.240  INFO 9856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-09-13 14:40:26.300  INFO 9856 --- [http-nio-8080-exec-1] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.sunyue.syblog.web.indexController .index', args=[]}
+2020-09-13 14:40:26.304  INFO 9856 --- [http-nio-8080-exec-1] com.sunyue.syblog.aspect.LogAspest       : result:index
+2020-09-13 14:40:26.304  INFO 9856 --- [http-nio-8080-exec-1] com.sunyue.syblog.aspect.LogAspest       : doAfter.........
+2020-09-13 14:40:26.983  INFO 9856 --- [http-nio-8080-exec-6] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/flash', ip='0:0:0:0:0:0:0:1', classMethod='com.sunyue.syblog.web.indexController .flash', args=[]}
+2020-09-13 14:40:26.983  INFO 9856 --- [http-nio-8080-exec-6] com.sunyue.syblog.aspect.LogAspest       : result:flash
+2020-09-13 14:40:26.983  INFO 9856 --- [http-nio-8080-exec-6] com.sunyue.syblog.aspect.LogAspest       : doAfter.........
+2020-09-13 17:22:36.729  INFO 8956 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication on 老七的computer with PID 8956 (C:\Users\孙悦\Desktop\核心篇代码\syblog\target\classes started by 孙悦 in C:\Users\孙悦\Desktop\核心篇代码\syblog)
+2020-09-13 17:22:36.749 DEBUG 8956 --- [main] com.sunyue.syblog.SyblogApplication      : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-13 17:22:36.749  INFO 8956 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: dev
+2020-09-13 17:22:38.839  INFO 8956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-13 17:22:39.158  INFO 8956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 308ms. Found 4 JPA repository interfaces.
+2020-09-13 17:22:40.361  INFO 8956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-13 17:22:40.377  INFO 8956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-13 17:22:40.377  INFO 8956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-13 17:22:40.381  INFO 8956 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-13 17:22:40.381  INFO 8956 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-13 17:22:40.381  INFO 8956 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-13 17:22:40.389  INFO 8956 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-13 17:22:40.580  INFO 8956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-13 17:22:40.584  INFO 8956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3535 ms
+2020-09-13 17:22:41.012  INFO 8956 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-13 17:22:41.076  INFO 8956 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-13 17:22:41.128  INFO 8956 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-13 17:22:41.251  WARN 8956 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-13 17:22:41.351  INFO 8956 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-13 17:22:41.563  INFO 8956 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-13 17:22:41.843  INFO 8956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-13 17:22:41.843  INFO 8956 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-09-13 17:22:44.643  INFO 8956 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-13 17:22:44.659  INFO 8956 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-13 17:22:45.989  INFO 8956 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-13 17:22:45.997  INFO 8956 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-13 17:22:46.381  INFO 8956 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-13 17:22:46.389  INFO 8956 --- [main] com.sunyue.syblog.SyblogApplication      : Started SyblogApplication in 10.447 seconds (JVM running for 13.203)
+2020-09-13 17:22:46.436  INFO 8956 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1599814300,1599814689,1599874298] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-13 17:22:46.452  INFO 8956 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-13 17:22:46.452  INFO 8956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-13 17:22:46.468  INFO 8956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-09-13 17:25:26.091  INFO 8956 --- [http-nio-8080-exec-7] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/blog', ip='0:0:0:0:0:0:0:1', classMethod='com.sunyue.syblog.web.indexController .blog', args=[]}
+2020-09-13 17:25:26.091  INFO 8956 --- [http-nio-8080-exec-7] com.sunyue.syblog.aspect.LogAspest       : result:blog
+2020-09-13 17:25:26.095  INFO 8956 --- [http-nio-8080-exec-7] com.sunyue.syblog.aspect.LogAspest       : doAfter.........
+2020-09-13 17:25:40.101  INFO 8956 --- [http-nio-8080-exec-2] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.sunyue.syblog.web.indexController .index', args=[]}
+2020-09-13 17:25:40.105  INFO 8956 --- [http-nio-8080-exec-2] com.sunyue.syblog.aspect.LogAspest       : result:index
+2020-09-13 17:25:40.105  INFO 8956 --- [http-nio-8080-exec-2] com.sunyue.syblog.aspect.LogAspest       : doAfter.........
+2020-09-13 17:25:40.160  INFO 8956 --- [http-nio-8080-exec-4] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/flash', ip='0:0:0:0:0:0:0:1', classMethod='com.sunyue.syblog.web.indexController .flash', args=[]}
+2020-09-13 17:25:40.160  INFO 8956 --- [http-nio-8080-exec-4] com.sunyue.syblog.aspect.LogAspest       : result:flash
+2020-09-13 17:25:40.160  INFO 8956 --- [http-nio-8080-exec-4] com.sunyue.syblog.aspect.LogAspest       : doAfter.........

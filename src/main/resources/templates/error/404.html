@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--    移动端的预览设置-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--    音乐盒-->
+    <link rel="stylesheet" href="../static/lib/music/music.css">
+    <title>404</title>
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+
+</head>
+<body>
+<!--导航-->
+<nav th:replace="_fragments :: menu(0)" class="ui inverted attached segment m-padded-tb-mini" id="headNav">
+    <div class="ui stackable container" id="navContainer">
+        <!--            把他设置为一个菜单，下面每一个都是一个item-->
+        <div class="ui  inverted secondary menu">
+            <div class="brand-logo">
+                <a class="waves-effect waves-light " href=""></a>
+                <!--                 需要设置logo字体大小-->
+                <span class=" ui teal header item m-logo-text"> SyBlog</span>
+            </div>
+            <!--            stackable是可堆叠的意思-->
+            <div class="right  item m-padded-link-right">
+                <a href="#" class="item"><i class="home icon"></i>首页</a>
+                <a href="#" class="item"><i class="tags icon"></i>标签</a>
+                <a href="#" class="item"><i class="idea icon"></i>分类</a>
+                <a href="#" class="item"><i class="chevron down icon"></i>归档</a>
+                <a href="#" class="item"><i class="info icon"></i>关于我</a>
+                <a href="#" class="item"><i class="location arrow icon"></i>友情链接</a>
+                <!--                transparent是透明的意思-->
+                <div class="ui icon input">
+                    <input type="text" placeholder="搜索">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+
+<div class="ui center aligned container">
+    <div class="ui error message" style="width:100%">
+            <div class="ui segment" >
+                <h2>错误代码：404</h2>
+                <br>
+                <br>
+                <p>提示：对不起，你访问的资源不存在！</p>
+                <br>
+                <br>
+            </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--footer-->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <!--            semantic ui 分16份，而bootstrap分12份，一行-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img class="ui rounded image" src="../static/images/wxchat.png" th:src="@{/images/wxchat.png}"
+                             style="width: 110px" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header ">其他平台（me）</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item"><i class=" github icon"></i>&ensp;&ensp;Github</a>
+                    <a href="#" class="item"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+                    <a href="#" class="item"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui inverted header ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:&ensp;1412824257@qq.com</a>
+                    <a href="#" class="item">QQ：&ensp;1412824257</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4 class="ui inverted header ">Monitor</h4>
+                <p id="m-p-mointor">一个人并不是生来要给打败的，你尽可以把他消灭掉，但他的精神是不可战胜的。 ---海明威</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider" style="width: 100% "></div>
+        <p class="m-copyright" style="font-size: medium ">Copyright &ensp; © &ensp;2020-2021 &ensp;|&ensp; Designed
+            By: &ensp;SunYue </p>
+    </div>
+</footer>
+</body>
+</html>

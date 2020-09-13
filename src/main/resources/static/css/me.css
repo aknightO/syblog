@@ -1,0 +1,177 @@
+/****aligned*****/
+.m-padded-tb-mini {
+    padding-top: 0.1em !important;
+    padding-bottom: 0.1em !important;
+}
+
+.m-padded-tb-mini1 {
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+
+.m-padded-tb-mini2 {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.m-padded-tb-large {
+    padding-top: 3em !important;
+    padding-bottom: 2em !important;
+}
+
+.m-padded-tb-mid {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+.m-padded-tb-mid1 {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+
+.m-padded-tb-massive {
+    margin-top: 0!important;
+    padding-top: 4em !important;
+    padding-bottom: 2em !important;
+}
+
+.m-padded-top {
+    margin-top: 1em !important;
+    margin-bottom: 3.5em !important;
+}
+
+.m-margin-top {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+    margin-left: 2em !important;
+}
+
+.m-margin-top1 {
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+    margin-left: 7em !important;
+}
+
+.m-margin-top2 {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+    margin-left: 7em !important;
+}
+
+.m-margin-top3 {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.4em !important;
+}
+
+.m-margin-top4 {
+    margin-top: 15% !important;
+    margin-left: 37% !important;
+}
+
+.m-margin-top5 {
+    margin-top: 3em !important;
+}
+
+.m-margin-left {
+    margin-left: 30em !important;
+}
+
+.m-margin-left01 {
+    margin-left: 7em !important;
+}
+
+/*文章具体内容的左右边距*/
+.m-padded-lr {
+    padding-left: 5em !important;
+    padding-right: 5em !important;
+}
+
+/**************/
+.m-logo-text {
+    font-size: 30px !important;
+    left: -50px !important;
+}
+
+.m-padded-link-right {
+    left: 80px !important;
+}
+
+.m-copyright {
+    padding-top: 10px !important;
+}
+
+#m-p-mointer {
+    text-decoration-color: white;
+}
+
+/******MyText*******/
+.m-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8;
+}
+
+.m-text1 {
+    font-weight: 400 !important;
+    letter-spacing: 2px !important;
+    line-height: 1.8;
+    color: #333333;
+!important;
+}
+
+.m-text-top {
+    margin-top: 15px !important;
+    margin-bottom: 10px !important;
+}
+
+/****color*****/
+.m-black {
+    color: #333 !important;
+}
+
+/*****display******/
+/*<h>标签不换行*/
+.m-inline-block {
+    display: inline-block !important;
+}
+
+/****背景图片*****/
+body {
+    background: url(../images/spikes.png);
+}
+
+/******shadow*******/
+.m-shadow-small {
+    /*0.2指的是透明度*/
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/******布局绝对定位*/
+.m-fixed {
+    position: fixed !important;
+    /* z-index: 10!把这个元素放在最上层*/
+    z-index: 10 !important;
+}
+
+.m-fixed1 {
+    position: fixed !important;
+    /* z-index: 10!把这个元素放在最上层*/
+    z-index: 0 !important;
+}
+
+.m-right-bottom {
+    bottom: 10px !important;
+    right: 70px !important;
+}
+
+/******/
+.canvas-wrap {
+    position: absolute !important;
+    z-index: -1;
+}
+
+/* Make this a positioned parent */
+/*.overlay {*/
+/*    position: absolute !important;*/
+/*}*/

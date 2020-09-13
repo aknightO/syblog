@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--    移动端的预览设置-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>博客管理</title>
+    <link rel="stylesheet" href="../../static/css/me.css" >
+
+</head>
+<body>
+<!--导航-->
+<!--说明是一个ui组件，invert反转-->
+<!--navbar-->
+<nav th:replace="admin/_fragments::menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
+    <div class="ui stackable container" id="navContainer">
+        <!--            把他设置为一个菜单，下面每一个都是一个item-->
+        <div class="ui  inverted secondary menu">
+            <div class="brand-logo">
+                <a class="waves-effect waves-light " href=""></a>
+                <!--                 需要设置logo字体大小-->
+                <span class=" ui teal header item m-logo-text"> 博客管理</span>
+            </div>
+            <!--            stackable是可堆叠的意思-->
+            <div class=" item m-padded-link-right">
+                <a href="#" class="active item"><i class="home icon"></i>博客</a>
+                <a href="#" class="item"><i class="tags icon"></i>标签</a>
+                <a href="#" class="item"><i class="idea icon"></i>分类</a>
+                <div class="ui inverted  m-margin-left menu">
+                    <div class="ui dropdown  item">
+                        <div class="text">
+                            <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">孙悦
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">注销</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--二级导航-->
+<div class="ui pointing attached menu">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" class="item">发布</a>
+            <a href="#" class="active teal item">管理列表</a>
+        </div>
+
+    </div>
+</div>
+<!--中间内容-->
+<div class="m-padded-tb-large">
+    <div class="ui container">
+        <!--        搜索的segment-->
+        <div  method="post" class="ui secondary segment form">
+<!--            隐含域，目的是为了传分页时候是第几页-->
+            <input type="hidden" name="page">
+            <div class="inline fields">
+                <div class="field">
+                    <input type="text" name="title" placeholder="标题">
+                </div>
+                <div class="field">
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="typeId">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">分类</div>
+                        <div class="menu">
+                            <div th:each="type:${types}" class="ui item" data-value="1" th:data-value="${type.id}" th:text="${type.name}"> 错误日志</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui checkbox">
+                        <input type="checkbox" id="recommend" name="recommend">
+                        <!--                        for的作用是点击文字，框中也画对号-->
+                        <label for="recommend">推荐</label>
+                    </div>
+                    <butoton type="button" id="search-btn" class="teal basic ui button"><i class="search icon"></i>搜索</butoton>
+                </div>
+            </div>
+        </div>
+        <!--     查询得到的表单   -->
+<!--        celled是加网格线-->
+<!--        th:fragment="blogList"后端的局部刷新-->
+        <div id="table-container">
+        <table class="ui celled compact table" th:fragment="blogList">
+<!--            标题头-->
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>标题</th>
+                <th>类型</th>
+                <th>是否推荐</th>
+                <th>更新时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+<!--            tbody-->
+            <tbody>
+            <tr th:each="blog,iterStat:${page.content}">
+                <td th:text="${iterStat.count}">1</td>
+                <td th:text="${blog.title}">关于本博客</td>
+                <td th:text="${blog.type.name}">认知升级</td>
+                <td th:text="${blog.recomment}? '是' : '否'">是</td>
+                <td th:text="$(blog.updateTime)">2017-02-12</td>
+                <td>
+                    <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini green  button">编辑</a>
+                    <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}"  class="ui mini red  button">删除</a>
+                </td>
+            </tr>
+            </tbody>
+<!--            tfoot-->
+            <tfoot>
+                <tr>
+                    <th colspan="6">
+<!--                        th:if="${page.totalPages>1}"总的页数大于一的时候才去显示，一页不到就没必要显示-->
+                        <div class="ui pagination menu" th:if="${page.totalPages>1}">
+<!--                            点击上一页和下一页的时候，动态处理form表单中的page属性，这个属性我在input:hidden中写了-->
+<!--                            th:attr自定义属性-->
+                            <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="  item" th:unless="${page.first}">上一页</a>
+                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>
+                        </div>
+                        <a href="#" class="ui teal right floated basic button" th:href="@{/admin/blogs/input}">新增</a>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+        </div>
+
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--footer-->
+<footer th:replace="admin/_fragments::footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <!--            semantic ui 分16份，而bootstrap分12份，一行-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img class="ui rounded image" src="./static/images/wxchat.png" style="width: 110px" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header ">其他平台（me）</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item"><i class=" github icon"></i>&ensp;&ensp;Github</a>
+                    <a href="#" class="item"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+                    <a href="#" class="item"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui inverted header ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:&ensp;1412824257@qq.com</a>
+                    <a href="#" class="item">QQ：&ensp;1412824257</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4 class="ui inverted header ">Monitor</h4>
+                <p id="m-p-mointor">一个人并不是生来要给打败的，你尽可以把他消灭掉，但他的精神是不可战胜的。 ---海明威</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider" style="width: 100% "></div>
+        <p class="m-copyright" style="font-size: medium ">Copyright &ensp; © &ensp;2020-2021 &ensp;|&ensp; Designed
+            By: &ensp;SunYue </p>
+    </div>
+</footer>
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+<script>
+    // <!--    二维码弹出-->
+    //     $('#payButton').popup({
+    //         popup : $('.payQ.popup'),
+    //         on: 'click',
+    //         position:'top center'
+    //     })
+
+    //注销
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+    //上面的page页面方法
+    function page(obj) {
+        //赋值
+        $("[name = 'page']").val($(obj).data("page"));
+        //意思是把表单数据发送到后台，处理后，发送到前台，在处理数据
+        loaddata();
+    }
+    $("#search-btn").click(function () {
+        $("[name='page']").val(0);
+        loaddata();
+    });
+    function loaddata() {
+        $("#table-container").load(/*[[@{/admin/blogs/search}]]*/"/admin/blogs/search",{
+            title : $("[name='title']").val(),
+            typeId : $("[name='typeId']").val(),
+            recommend : $("[name='recommend']").prop('checked'),
+            page : $("[name='page']").val()
+        });
+    }
+</script>
+</body>
+</html>

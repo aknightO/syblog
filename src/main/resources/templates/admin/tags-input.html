@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/_fragments::head(~{::title})">
+  <meta charset="UTF-8">
+  <!--    移动端的预览设置-->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <title>分类管理</title>
+  <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body>
+
+<!--navbar-->
+<nav th:replace="admin/_fragments::menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small"
+     id="headNav">
+  <div class="ui stackable container" id="navContainer">
+    <!--            把他设置为一个菜单，下面每一个都是一个item-->
+    <div class="ui  inverted secondary menu">
+      <div class="brand-logo">
+        <a class="waves-effect waves-light " href=""></a>
+        <!--                 需要设置logo字体大小-->
+        <span class=" ui teal header item m-logo-text"> 博客管理</span>
+      </div>
+      <!--            stackable是可堆叠的意思-->
+      <div class=" item m-padded-link-right">
+        <a href="#" class="ui item"><i class="home icon"></i>博客</a>
+        <a href="#" class="ui item"><i class="tags icon"></i>标签</a>
+        <a href="#" class="ui  item"><i class="idea icon"></i>分类</a>
+        <div class="ui inverted  m-margin-left menu">
+          <div class="ui dropdown  item">
+            <div class="text">
+              <img src="https://unsplash.it/100/100?image=1006" alt="" class="ui avatar image">孙悦
+            </div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a href="#" class="item">注销</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--二级导航-->
+<div class="ui pointing attached menu">
+  <div class="ui container">
+    <div class="right menu">
+      <a href="#" th:href="@{/admin/types/input}" class="item">新增</a>
+      <a href="#" th:href="@{admin/types}" class="active teal item">列表</a>
+    </div>
+  </div>
+</div>
+  <!--中间内容-->
+  <div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+      <form action="#" method="post"  th:object="${tag}" th:action="*{id}==null ? @{/admin/tags} : @{/admin/tags/{id}(id=*{id})} "  class="ui form">
+        <input type="hidden" name="id" th:value="*{id}">
+        <div class=" field">
+          <div class="ui left labeled input">
+            <label class="ui teal basic label">名称</label>
+            <input type="text" name="name" placeholder="分类名称" th:value="*{name}" >
+          </div>
+        </div>
+
+        <div class="ui error message"></div>
+        <!--/*/
+        <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
+          <i class="close icon"></i>
+          <div class="header">验证失败</div>
+          <p th:errors="*{name}">提交信息不符合规则</p>
+        </div>
+         /*/-->
+        <div class="ui right aligned container">
+          <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
+          <button class="ui teal submit button">提交</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<!--footer-->
+<footer th:replace="admin/_fragments::footer" class="ui inverted vertical segment m-padded-tb-massive">
+  <div class="ui center aligned container">
+    <div class="ui inverted divided grid">
+      <!--            semantic ui 分16份，而bootstrap分12份，一行-->
+      <div class="three wide column">
+        <div class="ui inverted link list">
+          <div class="item">
+            <img class="ui rounded image" src="./static/images/wxchat.png" style="width: 110px" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="three wide column">
+        <h4 class="ui inverted header ">其他平台（me）</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item"><i class=" github icon"></i>&ensp;&ensp;Github</a>
+          <a href="#" class="item"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+          <a href="#" class="item"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+        </div>
+      </div>
+
+      <div class="four wide column">
+        <h4 class="ui inverted header ">联系我</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item">Email:&ensp;1412824257@qq.com</a>
+          <a href="#" class="item">QQ：&ensp;1412824257</a>
+        </div>
+      </div>
+
+      <div class="six wide column">
+        <h4 class="ui inverted header ">Monitor</h4>
+        <p id="m-p-mointor">一个人并不是生来要给打败的，你尽可以把他消灭掉，但他的精神是不可战胜的。 ---海明威</p>
+      </div>
+    </div>
+    <div class="ui inverted section divider" style="width: 100% "></div>
+    <p class="m-copyright" style="font-size: medium ">Copyright &ensp; © &ensp;2020-2021 &ensp;|&ensp; Designed
+      By: &ensp;SunYue </p>
+  </div>
+</footer>
+  <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <!--/*/</th:block>/*/-->
+
+  <script>
+
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on : 'hover'
+    });
+
+    $('.ui.form').form({
+      fields : {
+        title : {
+          identifier: 'name',
+          rules: [{
+            type : 'empty',
+            prompt: '请输入标签名称'
+          }]
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>

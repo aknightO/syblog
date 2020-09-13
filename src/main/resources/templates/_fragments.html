@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <!--    移动端的预览设置-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--    排版引入css-->
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <!--动画引入-->
+    <link rel="stylesheet" href="../static/css/animate.min.css" th:href="@{/css/animate.min.css}"/>
+    <!--    代码高亮-->
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+    <!--    目录-->
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <!--    <link rel="stylesheet" href="./static/lib/tocbot/styles.css"> 没必要引入这个，引入后会发生排版错乱-->
+    <!--    <title th:replace="${title}">博客</title>-->
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <!--    音乐盒-->
+    <link rel="stylesheet" href="../static/lib/music/music.css" th:href="@{/lib/music/music.css}">
+<!--    &lt;!&ndash;    线条&ndash;&gt;-->
+<!--    <link rel="stylesheet" href="../static/css/row.css" th:href="@{/css/row.css}">-->
+</head>
+
+<body style="z-index: 2!important;">
+<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini" id="headNav">
+    <div class="ui stackable container" id="navContainer">
+        <!--            把他设置为一个菜单，下面每一个都是一个item-->
+        <div class="ui  inverted secondary menu">
+            <div class="brand-logo">
+                <a class="waves-effect waves-light " href=""></a>
+                <!--                 需要设置logo字体大小-->
+                <span class=" ui teal header item m-logo-text"> SyBlog</span>
+            </div>
+            <!--            stackable是可堆叠的意思-->
+            <div class="right  item m-padded-link-right">
+                <!--                th:classappend="$(n==1) ? 'active'"追加显示激活状态-->
+                <a href="#" class="item" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
+                <a href="#" class="item" th:classappend="${n==2} ? 'active'"><i class="tags icon"></i>标签</a>
+                <a href="#" class="item" th:classappend="${n==3} ? 'active'"><i class="idea icon"></i>分类</a>
+                <a href="#" class="item" th:classappend="${n==4} ? 'active'"><i class="chevron down icon"></i>归档</a>
+                <a href="#" class="item" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
+                <a href="#" class="item" th:classappend="${n==6} ? 'active'"><i class="location arrow icon"></i>友情链接</a>
+                <!--                transparent是透明的意思-->
+                <div class="ui icon input">
+                    <input type="text" placeholder="搜索">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<canvas id="J_dotLine" style="background-color:  #e6e6e6;"></canvas>
+</body>
+<!--footer-->
+<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <!--            semantic ui 分16份，而bootstrap分12份，一行-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img class="ui rounded image" src="../static/images/wxchat.png" th:src="@{/images/wxchat.png}"
+                             style="width: 110px" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header ">其他平台（me）</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item"><i class=" github icon"></i>&ensp;&ensp;Github</a>
+                    <a href="#" class="item"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+                    <a href="#" class="item"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui inverted header ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:&ensp;1412824257@qq.com</a>
+                    <a href="#" class="item">QQ：&ensp;1412824257</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4 class="ui inverted header ">Monitor</h4>
+                <p id="m-p-mointor">一个人并不是生来要给打败的，你尽可以把他消灭掉，但他的精神是不可战胜的。 ---海明威</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider" style="width: 100% "></div>
+        <p class="m-copyright" style="font-size: medium ">Copyright &ensp; © &ensp;2020-2021 &ensp;|&ensp; Designed
+            By: &ensp;SunYue </p>
+    </div>
+</footer>
+
+<th:block th:fragment="script">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <!--目录-->
+    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+    <!--代码高亮-->
+    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+    <!--生成本链接二维码-->
+    <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+    <!--平滑滚动-->
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <!--滚动侦测-->
+    <script src="../static/lib/waypoints/jquery.waypoints.min.js"
+            th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+<!--&lt;!&ndash;    线条&ndash;&gt;-->
+<!--    <script type="text/javascript" src="../static/js/row.js" th:href="@{/js/row.js}"></script>-->
+<!--   樱花飘落 -->
+    <script type="text/javascript" src="../static/js/hm.js"  th:href="@{/js/hm.js}"></script>
+</th:block>
+
+
+
+</html>
