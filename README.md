@@ -7,7 +7,7 @@
 
 开发这个项目当时是我在B站上看到一个视频说是开发一个个人博客很炫我就来了，嘿嘿嘿o(*￣▽￣*)o！
 
-参考项目来自于另一个github用户：
+参考项目来自于另一个github用户：https://github.com/AlanLiang1998
 ## 2.说说技术栈吧！
 前端：html，css,js,jquery,semantic ui，
 bootstrap(这个我用来做轮播图了！)
