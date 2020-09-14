@@ -58,7 +58,9 @@ bootstrap(这个我用来做轮播图了！)
 
 持久化层:Jpa;
 
-数据库：mysql
+数据库：mysql（数据库挂载到docker上面）
+
+容器引擎：docker（这是我在刚开是了解云服务器时顺带学的一些，后来感觉还挺好用，我就把我的数据库放到docker上了，等下我截个图d=====(￣▽￣*)b）
 
 数据库连接池:Druid
 
@@ -68,5 +70,19 @@ bootstrap(这个我用来做轮播图了！)
 
 总体就这么多了：到了找工作的时间，这个项目我停，我会后续慢慢更新的，争取把他写完！（git的时候出问题了可以@我哦，有时间我会帮助你解答一些问题！）
 
-项目截图：
+## 3.项目截图：
+### index:
 ![Image text](https://user-images.githubusercontent.com/52133282/93034813-ec077000-f66d-11ea-99c6-0337ee137187.png)
+![image](https://user-images.githubusercontent.com/52133282/93035046-88317700-f66e-11ea-978c-0bb0ac8fc97c.png)
+
+### 登录：
+![image](https://user-images.githubusercontent.com/52133282/93035083-9b444700-f66e-11ea-903e-ceec46dd6d17.png)
+
+### 管理界面:
+![image](https://user-images.githubusercontent.com/52133282/93035115-b8791580-f66e-11ea-96bf-7674982d38b3.png)
+![image](https://user-images.githubusercontent.com/52133282/93035160-d8103e00-f66e-11ea-9777-de59df70e0bf.png)
+![image](https://user-images.githubusercontent.com/52133282/93035184-e52d2d00-f66e-11ea-9132-679041237210.png)
+![image](https://user-images.githubusercontent.com/52133282/93035247-1574cb80-f66f-11ea-9dde-8beef636d84b.png)
+
+### 
+
