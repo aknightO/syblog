@@ -9,7 +9,7 @@
 
 参考项目来自于另一个github用户：
 ## 2.说说技术栈吧！
-前端：html，css,js,jquery,semantic ui
+前端：html，css,js,jquery,semantic ui，
 bootstrap(这个我用来做轮播图了！)
 <!--    </ul>-->
     <div class="ui center aligned container">
@@ -53,8 +53,7 @@ bootstrap(这个我用来做轮播图了！)
 
 以及我最喜欢的音乐和插件（music.js），后端写博客的mardown编辑器(editormd.min.js)
 
-后端：
-主体框架：springboot
+后端：主体框架：springboot
 
 持久化层:Jpa;
 
@@ -84,5 +83,6 @@ bootstrap(这个我用来做轮播图了！)
 ![image](https://user-images.githubusercontent.com/52133282/93035184-e52d2d00-f66e-11ea-9132-679041237210.png)
 ![image](https://user-images.githubusercontent.com/52133282/93035247-1574cb80-f66f-11ea-9dde-8beef636d84b.png)
 
-### 
+### dokcer容器:
+![image](https://user-images.githubusercontent.com/52133282/93035819-abf5bc80-f670-11ea-91bb-0cfbee96354a.png)
 
