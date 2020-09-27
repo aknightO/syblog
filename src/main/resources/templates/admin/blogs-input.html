@@ -116,7 +116,7 @@
                         <label class="ui compact  teal basic label">标签</label>
                         <!-- multiple是可以多选的意思，一篇文章可能有很多标签 ，search添加了其中的搜索功能-->
                         <div class="ui selection fluid multiple search dropdown">
-                            <input type="hidden" name="tagIds">
+                            <input type="hidden" name="tagIds" value="1,2,3">
                             <i class="dropdown icon"></i>
                             <div class="default text">标签</div>
                             <div class="menu">
@@ -248,38 +248,38 @@
         on: 'hover'
     });
     //    对于form表单的一些规则，form表单下的fields中的title的验证title的规则是不能为空
-    $('.ui.form').form({
-        fields: {
-            title: {
-                identifier: 'title',
-                rules: {
-                    type: 'empty',
-                    prompt: '标题:请输入博客标题'
-                }
-            },
-            content: {
-                identifier: 'content',
-                rules: {
-                    type: 'empty',
-                    prompt: '标题:请输入博客内容'
-                }
-            },
-            typeId: {
-                identifier: 'typeId',
-                rules: {
-                    type: 'empty',
-                    prompt: '标题:请输入博客分类'
-                }
-            },
-            firstPicture: {
-                identifier: 'firstPicture',
-                rules: {
-                    type: 'empty',
-                    prompt: '标题:请输入博客图片'
-                }
-            },
-        }
-    });
+    // $('.ui.form').form({
+    //     fields: {
+    //         title: {
+    //             identifier: 'title',
+    //             rules: {
+    //                 type: 'empty',
+    //                 prompt: '标题:请输入博客标题'
+    //             }
+    //         },
+    //         content: {
+    //             identifier: 'content',
+    //             rules: {
+    //                 type: 'empty',
+    //                 prompt: '标题:请输入博客内容'
+    //             }
+    //         },
+    //         typeId: {
+    //             identifier: 'typeId',
+    //             rules: {
+    //                 type: 'empty',
+    //                 prompt: '标题:请输入博客分类'
+    //             }
+    //         },
+    //         firstPicture: {
+    //             identifier: 'firstPicture',
+    //             rules: {
+    //                 type: 'empty',
+    //                 prompt: '标题:请输入博客图片'
+    //             }
+    //         },
+    //     }
+    // });
     //保存按钮
     $('#save-btn').click(function () {
         $('[name="published"]').val(false);

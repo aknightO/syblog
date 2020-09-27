@@ -2,6 +2,7 @@ package com.sunyue.syblog.web.admin;
 
 import com.sunyue.syblog.po.Blog;
 import com.sunyue.syblog.po.Type;
+import com.sunyue.syblog.po.Usr;
 import com.sunyue.syblog.service.BlogService;
 import com.sunyue.syblog.service.TagService;
 import com.sunyue.syblog.service.TypeService;
@@ -15,6 +16,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/admin")
@@ -56,6 +60,20 @@ public class BlogController {
         //标签初始化
         model.addAttribute("tags",tagService.listTag());
         return INPUT;
+    }
+
+    @PostMapping("/blogs")
+    public String post(Blog blog, HttpSession session, RedirectAttributes attributes){
+        blog.setUser((Usr) session.getAttribute("user"));
+        blog.setType(typeService.getType(blog.getType().getId()));
+        blog.setTags(tagService.listTag(blog.getTagIds()));
+        Blog b=blogService.saveBlog(blog);
+        if(b==null){
+            attributes.addFlashAttribute("message","操作失败");
+        }else{
+            attributes.addFlashAttribute("message","操作成功");
+        }
+        return REDIRECT_LIST;
     }
 
 

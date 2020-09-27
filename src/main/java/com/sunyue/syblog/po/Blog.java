@@ -22,7 +22,21 @@ public class Blog {
         this.title = title;
     }
 
+    public String getTagIds() {
+        return TagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        TagIds = tagIds;
+    }
+
+    @Transient
+    private String TagIds;
+
     private String tag;
+
+    @Basic(fetch = FetchType.LAZY)//懒加载，用的时候加载，不用的时候不加载
+    @Lob
     private String content;
     private String firstPicture;
     private String flag;

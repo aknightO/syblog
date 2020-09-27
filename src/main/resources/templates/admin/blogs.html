@@ -103,10 +103,12 @@
             <tbody>
             <tr th:each="blog,iterStat:${page.content}">
                 <td th:text="${iterStat.count}">1</td>
-                <td th:text="${blog.title}">关于本博客</td>
+                <td th:text="${blog.title}">刻意练习清单</td>
                 <td th:text="${blog.type.name}">认知升级</td>
-                <td th:text="${blog.recomment}? '是' : '否'">是</td>
-                <td th:text="$(blog.updateTime)">2017-02-12</td>
+                <td th:text="${blog.recommend} ? '是':'否'">是</td>
+                <td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
+                <td th:text="${blog.updateTime}">2017-10-02 09:45</td>
+
                 <td>
                     <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini green  button">编辑</a>
                     <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}"  class="ui mini red  button">删除</a>
@@ -116,7 +118,7 @@
 <!--            tfoot-->
             <tfoot>
                 <tr>
-                    <th colspan="6">
+                    <th colspan="7">
 <!--                        th:if="${page.totalPages>1}"总的页数大于一的时候才去显示，一页不到就没必要显示-->
                         <div class="ui pagination menu" th:if="${page.totalPages>1}">
 <!--                            点击上一页和下一页的时候，动态处理form表单中的page属性，这个属性我在input:hidden中写了-->
@@ -129,6 +131,12 @@
                 </tr>
             </tfoot>
         </table>
+            <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+                <i class="close icon"></i>
+                <div class="header">提示：</div>
+                <p th:text="${message}">恭喜，操作成功！ </p>
+            </div>
+
         </div>
 
     </div>
@@ -223,6 +231,13 @@
             page : $("[name='page']").val()
         });
     }
+    //消息提示关闭初始化
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
 </script>
 </body>
 </html>
