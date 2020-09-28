@@ -13,6 +13,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.data.domain.Pageable;
@@ -52,8 +53,20 @@ public class BlogController {
         return "admin/blogs :: blogList";
     }
 
+    //博客编辑
+    @GetMapping("/blogs/{id}/input")
+    public String input(@PathVariable Long id, Model model){
+        model.addAttribute("blog",new Blog());
+        model.addAttribute("types",typeService.listType());
+
+        Blog blog=blogService.getBlog(id);
+        blog.init();
+        model.addAttribute("blog",blog);
+        return INPUT;
+    }
+
     @GetMapping("/blogs/input")
-    public String input(Model model){
+    public String editinput(Model model){
         //为了共用页面是报错，初始化Blog页面
         model.addAttribute("blog",new Blog());
         model.addAttribute("types",typeService.listType());
@@ -61,6 +74,7 @@ public class BlogController {
         model.addAttribute("tags",tagService.listTag());
         return INPUT;
     }
+
 
     @PostMapping("/blogs")
     public String post(Blog blog, HttpSession session, RedirectAttributes attributes){
@@ -76,5 +90,11 @@ public class BlogController {
         return REDIRECT_LIST;
     }
 
+    @GetMapping("/blogs/{id}/delete")
+    public String delete( @PathVariable Long id,RedirectAttributes attributes){
+        blogService.deleteBlog(id );
+        attributes.addFlashAttribute("message", "删除成功");
+        return REDIRECT_LIST;
+    }
 
 }

@@ -8,7 +8,9 @@ import com.sunyue.syblog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -56,9 +58,15 @@ public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
     @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
-        blog.setCreateTime(new Date());
-        blog.setUpdateTime(new Date());
-        blog.setViews(0);
+        //如果为空blog新增，否则只是更新
+        if(blog==null){
+            blog.setCreateTime(new Date());
+            blog.setUpdateTime(new Date());
+            blog.setViews(0);
+        }else {
+            blog.setUpdateTime(new Date());
+        }
+
         return blogRepository.save(blog);
     }
 
@@ -78,5 +86,17 @@ public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
     @Override
     public void deleteBlog(Long id) {
          blogRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Blog> listRecommendBlogTop(Integer size) {
+        Sort sort =Sort.by(Sort.Direction.DESC,"updateTime");
+        Pageable pageable = PageRequest.of(0,size,sort);
+        return blogRepository.findTop(pageable);
+    }
+
+    @Override
+    public Page<Blog> listBlog(Pageable pageable) {
+        return blogRepository.findAll(pageable);
     }
 }

@@ -27,4 +27,7 @@ public interface TypeService {
 
     //返回所有数据
     List<Type> listType();
+
+    //首页的分类推荐
+    List<Type> listTypeTop(Integer size);
 }

@@ -35,6 +35,17 @@ public class Blog {
 
     private String tag;
 
+    //博客描述
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Basic(fetch = FetchType.LAZY)//懒加载，用的时候加载，不用的时候不加载
     @Lob
     private String content;
@@ -207,11 +218,38 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
+    //把tag字符串分割得到tagids
+    public void init() {
+        this.TagIds = tagsToIds(this.getTags());
+    }
+
+    //1,2,3
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if (flag) {
+                    ids.append(",");
+                } else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        } else {
+            return TagIds;
+        }
+    }
+
     @Override
     public String toString() {
         return "Blog{" +
                 "id=" + id +
+                ", title='" + title + '\'' +
+                ", TagIds='" + TagIds + '\'' +
                 ", tag='" + tag + '\'' +
+                ", description='" + description + '\'' +
                 ", content='" + content + '\'' +
                 ", firstPicture='" + firstPicture + '\'' +
                 ", flag='" + flag + '\'' +
@@ -223,6 +261,10 @@ public class Blog {
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", comments=" + comments +
+                ", type=" + type +
+                ", user=" + user +
+                ", tags=" + tags +
                 '}';
     }
 }
