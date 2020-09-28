@@ -61,7 +61,7 @@
 <!--<canvas id="J_dotLine" style="background-color: #e6e6e6;;" class="canvas-wrap"></canvas>-->
 <div id="overlay" class=" m-padded-tb-large">
     <div class="ui container">
-        <div class="ui stackable grid ">
+        <div class="ui  mobile stackable grid ">
             <!--十列-->
             <!--        左侧博客内容    -->
             <div class="ten wide column">
@@ -73,7 +73,7 @@
                             <h3 class="ui teal header">博客</h3>
                         </div>
                         <div class="right aligned column" style="font-size: large ">
-                            共<h3 class="ui orange header m-inline-block ">14</h3>篇
+                            共<h3 class="ui orange header m-inline-block " th:text="${page.totalElements}">14</h3>篇
                         </div>
                     </div>
                 </div>
@@ -90,8 +90,59 @@
                             </div>
                         </div>
                     </div>
+                    <div class="ui padded  segment m-padded-top " th:each="blog : ${page.content}">
+                    <!--                        page.content获取这个数据列表-->
+                    <!--                        middle aligned为了图片垂直居中-->
+                    <div class="ui middle aligned grid" >
+                        <div class="ten wide column">
+                            <!--                               文章布局 -->
+                            <h3 class="ui header"><a href="#" target="_blank" style="color: black"  th:href="@{blog/{id}(id=${blog.id})}" th:text="${blog.title}">你真的理解什么是宇宙吗？</a>  </h3>
+                            <p class="m-text" th:text="${blog.description}">
+                                Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
+                                开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...
+                            </p>
+                            <div class="ui  grid">
+                                <div class="ten wide column">
+                                    <div class="ui horizontal link list">
+                                        <!--  放图片-->
+                                        <div class="item m-up-NameAndImg">
+                                            <!-- ui avatar image用于做圆形图像-->
+<!--                                            th:src="@{${blog.user.avatar}}"-->
+                                            <img src="https://picsum.photos/seed/picsum/130/130"  class="ui avatar image " alt=""    >
+<!--                                           th:text="${blog.user.nickname}" -->
+                                            <div class="content"><a href="#" class="header" >孙悦</a></div>
+                                        </div>
+
+                                        <!-- 放时间-->
+                                        <div class="item ">
+                                            <i class="calendar icon"> </i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-9-1</span>
+                                        </div>
+                                        <!--                                            放观看次数-->
+                                        <div class="item ">
+                                            <i class="eye icon"> </i> <span th:text="${blog.views}">1234</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right aligned six wide column">
+                                    <a href="#" target="_blank" class="ui teal basic mini label" th:text="${blog.type.name}">认知升级</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="six wide column">
+                            <a href="#" th:href="@{blog/{id}(id=${blog.id})}" target="_blank">
+                                <!--                                    800/450为了设置图片大小-->
+                                <img src="https://picsum.photos/seed/picsum/800/450" th:src="@{${blog.firstPicture}}" class="ui rounded image "
+                                     alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    <!--/*-->
                     <div class="ui padded  segment  m-padded-top">
-                        <div class="ui grid ">
+<!--                        middle aligned为了图片垂直居中-->
+                        <div class="ui middle aligned grid ">
                             <div class="ten wide column">
                                 <!--                               文章布局 -->
                                 <h3 class="ui header"><a href="#" target="_blank"
@@ -99,7 +150,7 @@
                                 </h3>
                                 <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
                                     开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
-                                <div class="ui  grid">
+                                <div class="ui grid">
                                     <div class="ten wide column">
                                         <div class="ui  horizontal link list">
                                             <!-- 放图片-->
@@ -136,7 +187,8 @@
                         </div>
                     </div>
                     <div class="ui padded  segment  m-padded-top">
-                        <div class="ui grid ">
+                        <!--                        middle aligned为了图片垂直居中-->
+                        <div class="ui middle aligned grid ">
                             <div class="ten wide column">
                                 <!--                               文章布局 -->
                                 <h3 class="ui header"><a href="#" target="_blank"
@@ -144,172 +196,21 @@
                                 </h3>
                                 <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
                                     开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
-                                <div class="ui  grid">
+                                <div class="ui grid">
                                     <div class="ten wide column">
-                                        <div class="ui horizontal link list">
-                                            <!--                                         放图片-->
+                                        <div class="ui  horizontal link list">
+                                            <!-- 放图片-->
                                             <div class="item m-up-NameAndImg">
                                                 <!--                                                ui avatar image用于做圆形图像-->
                                                 <img src="https://picsum.photos/seed/picsum/130/130"
                                                      class="ui avatar image " alt="">
                                                 <div class="content"><a href="#" class="header">孙悦</a></div>
                                             </div>
-
-                                            <!--                                            放时间-->
+                                            <!-- 放时间-->
                                             <div class="item ">
                                                 <i class="calendar icon"> </i>2021-9-1
                                             </div>
-                                            <!--                                            放观看次数-->
-                                            <div class="item ">
-                                                <i class="eye icon"> </i> 1234
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned six wide column">
-                                        <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="six wide column">
-                                <a href="#" target="_blank">
-                                    <!--                                    800/450为了设置图片大小-->
-                                    <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
-                                         alt="">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="ui padded  segment  m-padded-top">
-                        <div class="ui grid ">
-                            <div class="ten wide column">
-                                <!--                               文章布局 -->
-                                <h3 class="ui header"><a href="#" target="_blank"
-                                                         style="color: black">你真的理解什么是宇宙吗？</a>
-                                </h3>
-                                <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
-                                    开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
-                                <div class="ui  grid">
-                                    <div class="ten wide column">
-                                        <div class="ui horizontal link list">
-                                            <!--                                         放图片-->
-                                            <div class="item m-up-NameAndImg">
-                                                <!--                                                ui avatar image用于做圆形图像-->
-                                                <img src="https://picsum.photos/seed/picsum/130/130"
-                                                     class="ui avatar image " alt="">
-                                                <div class="content"><a href="#" class="header">孙悦</a></div>
-                                            </div>
-
-                                            <!--                                            放时间-->
-                                            <div class="item ">
-                                                <i class="calendar icon"> </i>2021-9-1
-                                            </div>
-                                            <!--                                            放观看次数-->
-                                            <div class="item ">
-                                                <i class="eye icon"> </i> 1234
-
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="right aligned six wide column">
-                                        <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="six wide column">
-                                <a href="#" target="_blank">
-                                    <!--                                    800/450为了设置图片大小-->
-                                    <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
-                                         alt="">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="ui padded  segment  m-padded-top">
-                        <div class="ui grid ">
-                            <div class="ten wide column">
-                                <!--                               文章布局 -->
-                                <h3 class="ui header"><a href="#" target="_blank"
-                                                         style="color: black">你真的理解什么是宇宙吗？</a>
-                                </h3>
-                                <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
-                                    开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
-                                <div class="ui  grid">
-                                    <div class="ten wide column">
-                                        <div class="ui horizontal link list">
-                                            <!--                                         放图片-->
-                                            <div class="item m-up-NameAndImg">
-                                                <!--                                                ui avatar image用于做圆形图像-->
-                                                <img src="https://picsum.photos/seed/picsum/130/130"
-                                                     class="ui avatar image " alt="">
-                                                <div class="content"><a href="#" class="header">孙悦</a></div>
-                                            </div>
-
-                                            <!--                                            放时间-->
-                                            <div class="item ">
-                                                <i class="calendar icon"> </i>2021-9-1
-                                            </div>
-                                            <!--                                            放观看次数-->
-                                            <div class="item ">
-                                                <i class="eye icon"> </i> 1234
-
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-                                    <div class="right aligned six wide column">
-                                        <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="six wide column">
-                                <a href="#" target="_blank">
-                                    <!--                                    800/450为了设置图片大小-->
-                                    <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
-                                         alt="">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="ui padded  segment ">
-                        <div class="ui grid">
-                            <div class="ten wide column">
-                                <!--                               文章布局 -->
-                                <h3 class="ui header"><a href="#" target="_blank"
-                                                         style="color: black">你真的理解什么是宇宙吗？</a>
-                                </h3>
-                                <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
-                                    开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
-                                <div class="ui  grid">
-                                    <div class="ten wide column">
-                                        <div class="ui horizontal link list">
-                                            <!--                                         放图片-->
-                                            <div class="item m-up-NameAndImg">
-                                                <!--                                                ui avatar image用于做圆形图像-->
-                                                <img src="https://picsum.photos/seed/picsum/130/130"
-                                                     class="ui avatar image " alt="">
-                                                <div class="content"><a href="#" class="header">孙悦</a></div>
-                                            </div>
-
-                                            <!--                                            放时间-->
-                                            <div class="item ">
-                                                <i class="calendar icon"> </i>2021-9-1
-                                            </div>
-                                            <!--                                            放观看次数-->
+                                            <!--放观看次数-->
                                             <div class="item ">
                                                 <i class="eye icon"> </i> 1234
                                             </div>
@@ -331,16 +232,19 @@
                             </div>
                         </div>
                     </div>
+                    <!--*/-->
+
                 </div>
                 <!--    footer-->
                 <div class="ui bottom attached segment">
-                    <div class="ui middle aligned two column grid">
+<!--                    th:if="${page.totalPages>1}"大于一页才开始分页-->
+                    <div class="ui middle aligned two column grid" th:if="${page.totalPages>1}">
                         <div class="column">
                             <!--teal basic 把按钮设置为空心和teal色-->
-                            <a href="#" class="ui teal basic mini button">上一页</a>
+                            <a href="#" th:unless="${page.first}" th:href="@{/(page=${page.number}-1)}" class="ui teal basic mini button" >上一页</a>
                         </div>
                         <div class="right aligned column" style="font-size: large ">
-                            <a href="#" class="ui teal basic mini button">下一页</a>
+                            <a  href="#" th:unless="${page.last}" th:href="@{/(page=${page.number}+1)}" class="ui teal basic mini button">下一页</a>
                         </div>
                     </div>
                 </div>
@@ -363,12 +267,12 @@
                     </div>
                     <div class="ui teal segment">
                         <!--                        做竖着的列表，剋以使用menu,fluid是填充这个容器-->
-                        <div class="ui fluid vertical menu">
-                            <div class="ui item">
-                                <a href="#" target="_blank">学习日志
-                                </a>
-                                <div class="ui teal basic left pointing label">13</div>
+                        <div class="ui fluid vertical menu" >
+                            <div class="ui item" th:each="type : ${types}">
+                                <a href="#" target="_blank" ><span th:text="${type.name}">学习日志</span></a>
+                                <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">13</div>
                             </div>
+                            <!--/*-->
                             <div class="ui item">
                                 <a href="#" target="_blank">思考感悟
                                 </a>
@@ -394,10 +298,8 @@
                                 </a>
                                 <div class="ui teal basic left pointing label">13</div>
                             </div>
-
-
+                            <!--*/-->
                         </div>
-
                     </div>
                 </div>
                 <!--                标签-->
@@ -413,22 +315,11 @@
                             </div>
                         </div>
                         <div class="ui teal segment">
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top" th:each="tag :${tags}">
+                                <span th:text="${tag.name}">方法论</span>
+                                <div class="detail" th:text="${#arrays.length(tag.blogs)}"> 23</div>
                             </a>
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
-
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
+                            <!--/*-->
                             <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
                                 <div class="detail"> 23</div>
                             </a>
@@ -441,9 +332,7 @@
                             <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
                                 <div class="detail"> 23</div>
                             </a>
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
+                            <!--*/-->
                         </div>
                     </div>
                 </div>
@@ -456,9 +345,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ui segment ">
-                        <a href="#" target="_blank" class="m-black m-text"> 用户故事（User Story）</a>
+                    <div class="ui segment " th:each="blog :${recommendBlogs}">
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text" th:text="${blog.title}"> 用户故事（User Story）</a>
                     </div>
+                    <!--/*-->
                     <div class="ui segment ">s
                         <a href="#" target="_blank" class="m-black m-text"> 用户故事（User Story）</a>
                     </div>
@@ -468,6 +358,7 @@
                     <div class="ui segment ">
                         <a href="#" target="_blank" class="m-black m-text"> 用户故事（User Story）</a>
                     </div>
+                    <!--*/-->
 
                 </div>
                 <!--                二维码-->
