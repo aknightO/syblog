@@ -96,7 +96,7 @@
                     <div class="ui middle aligned grid" >
                         <div class="ten wide column">
                             <!--                               文章布局 -->
-                            <h3 class="ui header"><a href="#" target="_blank" style="color: black"  th:href="@{blog/{id}(id=${blog.id})}" th:text="${blog.title}">你真的理解什么是宇宙吗？</a>  </h3>
+                            <h3 class="ui header"><a href="#" target="_blank" style="color: black;text-decoration: none"  th:href="@{blog/{id}(id=${blog.id})}" th:text="${blog.title}">你真的理解什么是宇宙吗？</a>  </h3>
                             <p class="m-text" th:text="${blog.description}">
                                 Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
                                 开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...
@@ -110,7 +110,7 @@
 <!--                                            th:src="@{${blog.user.avatar}}"-->
                                             <img src="https://picsum.photos/seed/picsum/130/130"  class="ui avatar image " alt=""    >
 <!--                                           th:text="${blog.user.nickname}" -->
-                                            <div class="content"><a href="#" class="header" >孙悦</a></div>
+                                            <div class="content"><a href="#" class="header" style="text-decoration: none" th:href="@{/about}" >孙悦</a></div>
                                         </div>
 
                                         <!-- 放时间-->
@@ -236,9 +236,9 @@
 
                 </div>
                 <!--    footer-->
-                <div class="ui bottom attached segment">
+                <div class="ui bottom attached segment" th:if="${page.totalPages>1}">
 <!--                    th:if="${page.totalPages>1}"大于一页才开始分页-->
-                    <div class="ui middle aligned two column grid" th:if="${page.totalPages>1}">
+                    <div class="ui middle aligned two column grid" >
                         <div class="column">
                             <!--teal basic 把按钮设置为空心和teal色-->
                             <a href="#" th:unless="${page.first}" th:href="@{/(page=${page.number}-1)}" class="ui teal basic mini button" >上一页</a>
@@ -269,7 +269,7 @@
                         <!--                        做竖着的列表，剋以使用menu,fluid是填充这个容器-->
                         <div class="ui fluid vertical menu" >
                             <div class="ui item" th:each="type : ${types}">
-                                <a href="#" target="_blank" ><span th:text="${type.name}">学习日志</span></a>
+                                <a href="#" target="_blank" style="text-decoration: none" ><span th:text="${type.name}">学习日志</span></a>
                                 <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">13</div>
                             </div>
                             <!--/*-->
@@ -311,7 +311,7 @@
                                 <i class="tags icon"></i>标签
                             </div>
                             <div class=" right aligned column">
-                                <a href="#" target="_blank"> more <i class="angle double right icon"></i></a>
+                                <a href="#" target="_blank" style="text-decoration: none"> more <i class="angle double right icon"></i></a>
                             </div>
                         </div>
                         <div class="ui teal segment">
@@ -346,7 +346,7 @@
                         </div>
                     </div>
                     <div class="ui segment " th:each="blog :${recommendBlogs}">
-                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text" th:text="${blog.title}"> 用户故事（User Story）</a>
+                        <a href="#" style="text-decoration: none" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black m-text" th:text="${blog.title}"> 用户故事（User Story）</a>
                     </div>
                     <!--/*-->
                     <div class="ui segment ">s

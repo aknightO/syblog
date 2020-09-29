@@ -1,6 +1,7 @@
 package com.sunyue.syblog.service;
 
 import com.sunyue.syblog.NotFoundException;
+import com.sunyue.syblog.Utils.MarkdownUtils;
 import com.sunyue.syblog.dao.BlogRepository;
 import com.sunyue.syblog.po.Blog;
 import com.sunyue.syblog.po.Type;
@@ -98,5 +99,26 @@ public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
     @Override
     public Page<Blog> listBlog(Pageable pageable) {
         return blogRepository.findAll(pageable);
+    }
+
+    //搜索
+
+    @Override
+    public Page<Blog> listBolg(String query, Pageable pageable) {
+        return blogRepository.findbyQuery(query,pageable);
+    }
+
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog=blogRepository.getOne(id);
+        if(blog==null){
+           throw new NotFoundException("该博客不存在");
+        }
+        //新建一个b防止数据库的数据被篡改
+        Blog b =new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent( MarkdownUtils.markdownToHtml(content));
+        return b;
     }
 }

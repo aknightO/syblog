@@ -21,5 +21,11 @@ public interface BlogService  {
 
     List<Blog> listRecommendBlogTop(Integer size);
 
+    //搜索
+    Page<Blog> listBolg(String query,Pageable pageable);
+
     void deleteBlog(Long id);
+
+    //把markdown查询和转换html
+    Blog getAndConvert(Long id);
 }

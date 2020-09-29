@@ -1,7 +1,6 @@
 package com.sunyue.syblog.web.admin;
 
 import com.sunyue.syblog.po.Blog;
-import com.sunyue.syblog.po.Type;
 import com.sunyue.syblog.po.Usr;
 import com.sunyue.syblog.service.BlogService;
 import com.sunyue.syblog.service.TagService;
@@ -37,7 +36,7 @@ public class BlogController {
     private TagService tagService;
 
     @GetMapping("/blogs")
-    public String blogs(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
+    public String blogs(@PageableDefault(size = 6, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                         BlogQuery blog, Model model) {
         //获取分类框中的东西
         model.addAttribute("types", typeService.listType());

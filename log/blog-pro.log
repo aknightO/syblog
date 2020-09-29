@@ -1,4 +1,18 @@
-2020-09-07 11:55:28.923  INFO 1656 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication on 老七的computer with PID 1656 (C:\Users\孙悦\Desktop\核心篇代码\syblog\target\classes started by 孙悦 in C:\Users\孙悦\Desktop\核心篇代码\syblog)
-2020-09-07 11:55:28.926  INFO 1656 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: pro
-2020-09-07 11:55:30.386  WARN 1656 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-09-07 11:55:30.737  INFO 1656 --- [main] com.sunyue.syblog.SyblogApplication      : Started SyblogApplication in 2.265 seconds (JVM running for 3.168)
+2020-09-28 20:33:40.170  INFO 3084 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication on 老七的computer with PID 3084 (C:\Users\孙悦\Desktop\核心篇代码\syblog\target\classes started by 孙悦 in C:\Users\孙悦\Desktop\核心篇代码\syblog)
+2020-09-28 20:33:40.185  INFO 3084 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: pro
+2020-09-28 20:33:42.574  WARN 3084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-28 20:33:48.265  INFO 3084 --- [main] com.sunyue.syblog.SyblogApplication      : Started SyblogApplication in 8.761 seconds (JVM running for 10.045)
+2020-09-28 20:34:13.289  INFO 3084 --- [http-nio-80-exec-1] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/', ip='127.0.0.1', classMethod='com.sunyue.syblog.web.indexController .index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-28 20:34:13.669  WARN 3084 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-09-28 20:34:13.712  WARN 3084 --- [http-nio-80-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-09-28 20:34:13.777  INFO 3084 --- [http-nio-80-exec-1] com.sunyue.syblog.aspect.LogAspest       : result:index
+2020-09-28 20:34:13.777  INFO 3084 --- [http-nio-80-exec-1] com.sunyue.syblog.aspect.LogAspest       : doAfter.........
+2020-09-28 20:34:14.221  INFO 3084 --- [http-nio-80-exec-5] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/flash', ip='127.0.0.1', classMethod='com.sunyue.syblog.web.indexController .flash', args=[]}
+2020-09-28 20:34:14.221  INFO 3084 --- [http-nio-80-exec-5] com.sunyue.syblog.aspect.LogAspest       : result:flash
+2020-09-28 20:34:14.222  INFO 3084 --- [http-nio-80-exec-5] com.sunyue.syblog.aspect.LogAspest       : doAfter.........
+2020-09-28 20:34:21.440  INFO 3084 --- [http-nio-80-exec-3] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/', ip='127.0.0.1', classMethod='com.sunyue.syblog.web.indexController .index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-09-28 20:34:21.756  INFO 3084 --- [http-nio-80-exec-3] com.sunyue.syblog.aspect.LogAspest       : result:index
+2020-09-28 20:34:21.756  INFO 3084 --- [http-nio-80-exec-3] com.sunyue.syblog.aspect.LogAspest       : doAfter.........
+2020-09-28 20:34:21.793  INFO 3084 --- [http-nio-80-exec-8] com.sunyue.syblog.aspect.LogAspest       : request:{}RequestLog{url='/flash', ip='127.0.0.1', classMethod='com.sunyue.syblog.web.indexController .flash', args=[]}
+2020-09-28 20:34:21.795  INFO 3084 --- [http-nio-80-exec-8] com.sunyue.syblog.aspect.LogAspest       : result:flash
+2020-09-28 20:34:21.810  INFO 3084 --- [http-nio-80-exec-8] com.sunyue.syblog.aspect.LogAspest       : doAfter.........

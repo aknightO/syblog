@@ -49,6 +49,7 @@
     </div>
 </nav>
 <!--中间内容-->
+
 <!--animate__animated animate__bounce一种动画样式,前面必须加animate__animated-->
 <div class="m-padded-tb-large animate__animated animate__fadeIn " id="thing">
     <div class="ui container" style="width: 55%">
@@ -65,11 +66,11 @@
                         </div>
                         <!-- 放时间-->
                         <div class="item ">
-                            <i class="calendar alternate  icon"> </i>2021-9-1
+                            <i class="calendar alternate  icon"> </i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-9-1</span>
                         </div>
                         <!--放观看次数-->
                         <div class="item ">
-                            <i class="eye icon"> </i>1234
+                            <i class="eye icon"> </i><span th:text="${blog.views}">1234</span>
                         </div>
                     </div>
                 </div>
@@ -77,18 +78,20 @@
         </div>
         <div class="ui attached segment">
             <!--          rounded是圆角的意思  图片-->
-            <img src="https://unsplash.it/800/450?image=1005" class="ui fluid rounded image" alt="">
+            <img  src="https://unsplash.it/800/450?image=1005"  class="ui fluid rounded image" alt="" th:src="@{${blog.firstPicture}}">
         </div>
         <div class="ui attached segment">
             <!--            文章-->
             <div class="ui  right aligned basic segment">
-                <div class="ui right aligned basic orange label">原创</div>
+                <div class="ui right aligned basic orange label" th:value="${blog.flag}">原创</div>
             </div>
-            <h2 class="ui center aligned header">关于本博客</h2>
+            <h2 class="ui center aligned header" th:text="${blog.title}">关于本博客</h2>
             <!--            文章具体内容-->
             <!--            typo typo-selection引用排版样式中的类-->
             <!--            js-toc-content生成目录的文章源-->
-            <div id="content" class="typo  js-toc-content typo-selection m-padded-lr m-text-top">
+<!--            需要把markdown转化为html页面，然后在进行展示-->
+<!--           th:utext是不进行转义，如果转义的话，他就是形成标签文本了 -->
+            <div id="content" class="typo  js-toc-content typo-selection m-padded-lr m-text-top" th:utext="${blog.content}">
                 <h1>中文网页重设与排版：<i class="serif">Typo.css</i></h1><br/>
                 <!--                  <pre><code class="language-css">p{color:red}</code></pre>代码高亮-->
                 <pre><code class="language-css">p{color:red}</code></pre>
@@ -498,7 +501,7 @@ h5,h6{font-size:1em;}
 
             <!--            标签-->
             <div class="m-margin-top1">
-                <div class="ui left pointing basic teal label">方法论</div>
+                <div class="ui left pointing basic teal label" th:each="tag : ${blog.tags }" th:text="${tag.name}">方法论</div>
             </div>
             <!--        赞赏-->
             <div class="ui center aligned basic  segment">
@@ -511,8 +514,8 @@ h5,h6{font-size:1em;}
                 <div class="ui basic horizontal orange label">
                     <!--                inherit继承label的字体大小-->
                     <div class="ui basic  images" style="font-size: inherit!important;">
-                        <img src="../static/images/wxpay.JPG" class="ui rounded bordered image" width="140px">
-                        <img src="../static/images/zfbpay.JPG" class="ui rounded bordered image" width="140px">
+                        <img src="../static/images/wxpay.JPG" th:src="@{/images/wxpay.JPG}" class="ui rounded bordered image" width="140px">
+                        <img src="../static/images/zfbpay.JPG" th:src="@{/images/zfbpay.JPG}" class="ui rounded bordered image" width="140px">
                     </div>
                 </div>
             </div>
@@ -524,9 +527,9 @@ h5,h6{font-size:1em;}
                 <div class="ui middle aligned grid">
                     <div class="ui ten wide column">
                         <ui class="list">
-                            <li>作者：孙悦（联系作者）</li>
+                            <li>作者：孙悦<a href="#" target="_blank" th:href="@{/about}" style="text-decoration: none">（联系作者）</a></li>
                             <br>
-                            <li>发表时间:2020 - 12 -03 : 20:08</li>
+                            <li>发表时间: <span th:text="${#dates.format(blog.updateTime,'yyyy--MM--dd HH:mm')}">2020 - 12 -03 : 20:08</span></li>
                             <br>
                             <li>版权声明：未得本人同意，不得转载</li>
                             <br>
@@ -534,7 +537,7 @@ h5,h6{font-size:1em;}
                         </ui>
                     </div>
                     <div class="ui six wide column">
-                        <img src="../static/images/wxchat.png" class="ui right floated rounded bordered image"
+                        <img src="../static/images/wxchat.png" th:src="@{/images/wxchat.png}" class="ui right floated rounded bordered image"
                              style="width: 150px">
                     </div>
                 </div>
@@ -738,7 +741,7 @@ h5,h6{font-size:1em;}
 <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
 <!--/*/</th:block>/*/-->
 </body>
-<script>
+<script th:inline="javascript">
     tocbot.init({
         // 目录初始化到哪个地方
         tocSelector: '.js-toc',
@@ -769,9 +772,11 @@ h5,h6{font-size:1em;}
         on: 'click',
         position: 'left center'
     });
-    //阅读二维码生成
+    //阅读二维码生成】
+    var serurl="http://www.sylog.top";
+    var url =  /*[[@{/blog/{id}(id=${blog.id})}]]*/"";
     var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: "http://jindo.dev.naver.com/collie",
+        text: serurl+ url,
         width: 128,
         height: 128,
         colorDark: "#000000",

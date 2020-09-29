@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    移动端的预览设置-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>标签</title>
+    <link rel="stylesheet" href="../static/css/me.css">
+
+</head>
+<body>
+<!--导航-->
+<!--说明是一个ui组件，invert反转-->
+<!--navbar-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
+    <div class="ui stackable container" id="navContainer">
+        <!--            把他设置为一个菜单，下面每一个都是一个item-->
+        <div class="ui  inverted secondary menu">
+            <div class="brand-logo">
+                <a class="waves-effect waves-light " href=""></a>
+                <!--                 需要设置logo字体大小-->
+                <span class=" ui teal header item m-logo-text"> SyBlog</span>
+            </div>
+            <!--            stackable是可堆叠的意思-->
+            <div class="right  item m-padded-link-right">
+                <a href="#" class="item"><i class="home icon"></i>首页</a>
+                <a href="#" class="item"><i class="tags icon"></i>标签</a>
+                <a href="#" class="item"><i class="idea icon"></i>分类</a>
+                <a href="#" class="item"><i class="chevron down icon"></i>归档</a>
+                <a href="#" class="item"><i class="info icon"></i>关于我</a>
+                <a href="#" class="item"><i class="location arrow icon"></i>友情链接</a>
+                <!--                transparent是透明的意思-->
+                <div class="ui icon input">
+                    <input type="text" placeholder="搜索">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--中间内容-->
+<div class="m-padded-tb-large">
+    <div class="ui centered container">
+        <!--        header-->
+        <div class="ui top  m-margin-left01  attached segment" style="width: 80%;">
+            <!--  middle aligned垂直方向剧中-->
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <h3 class="ui teal header">分类</h3>
+                </div>
+                <div class="right aligned column" style="font-size: large ">
+                    共<h3 class="ui orange header m-inline-block ">10</h3>个
+                </div>
+            </div>
+        </div>
+<!--        分类标签-->
+        <div class="ui attached m-margin-left01 segment" style="width: 80%;">
+<!--            labeled button标签按钮外加链接组合-->
+            <div class="ui labeled button m-margin-top">
+                <a href="#" class="ui teal button basic">学习日志</a>
+                <ui class="ui basic teal left pointing label">13</ui>
+            </div>
+            <div class="ui labeled button m-margin-top">
+                <a href="#" class="ui  button basic">思考和感悟</a>
+                <ui class="ui basic  left pointing label">13</ui>
+            </div>
+            <div class="ui labeled button m-margin-top">
+                <a href="#" class="ui  button basic">前端</a>
+                <ui class="ui basic  left pointing label">13</ui>
+            </div>
+            <div class="ui labeled button m-margin-top">
+                <a href="#" class="ui  button basic">SpringBoot</a>
+                <ui class="ui basic  left pointing label">13</ui>
+            </div>
+            <div class="ui labeled button m-margin-top">
+                <a href="#" class="ui  button basic">生活</a>
+                <ui class="ui basic  left pointing label">13</ui>
+            </div>
+            <div class="ui labeled button m-margin-top">
+                <a href="#" class="ui  button basic">Mybitis</a>
+                <ui class="ui basic  left pointing label">13</ui>
+            </div>
+        </div>
+<!--文章复用-->
+        <div class="ui teal  segment m-margin-top2" style="width: 80%">
+            <div class="ui grid">
+                <div class="ten wide column">
+                    <!--                               文章布局 -->
+                    <h3 class="ui header"><a href="#" target="_blank" style="color: black">你真的理解什么是宇宙吗？</a>
+                    </h3>
+                    <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
+                        开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
+                    <div class="ui  grid">
+                        <div class="ten wide column">
+                            <div class="ui horizontal link list">
+                                <!--                                         放图片-->
+                                <div class="item m-up-NameAndImg">
+                                    <!--                                                ui avatar image用于做圆形图像-->
+                                    <img src="https://picsum.photos/seed/picsum/130/130"
+                                         class="ui avatar image " alt="">
+                                    <div class="content"><a href="#" class="header">孙悦</a></div>
+                                </div>
+
+                                <!--                                            放时间-->
+                                <div class="item ">
+                                    <i class="calendar icon"> </i>2021-9-1
+                                </div>
+                                <!--                                            放观看次数-->
+                                <div class="item ">
+                                    <i class="eye icon"> </i> 1234
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right aligned six wide column">
+                            <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="six wide column">
+                    <a href="#" target="_blank">
+                        <!--                                    800/450为了设置图片大小-->
+                        <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
+                             alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="ui centered  attached m-margin-top2 segment" style="width: 80%">
+            <div class="ui grid">
+                <div class="ten wide column">
+                    <!--                               文章布局 -->
+                    <h3 class="ui header"><a href="#" target="_blank" style="color: black">你真的理解什么是宇宙吗？</a>
+                    </h3>
+                    <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
+                        开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
+                    <div class="ui  grid">
+                        <div class="ten wide column">
+                            <div class="ui horizontal link list">
+                                <!--                                         放图片-->
+                                <div class="item m-up-NameAndImg">
+                                    <!--                                                ui avatar image用于做圆形图像-->
+                                    <img src="https://picsum.photos/seed/picsum/130/130"
+                                         class="ui avatar image " alt="">
+                                    <div class="content"><a href="#" class="header">孙悦</a></div>
+                                </div>
+
+                                <!--                                            放时间-->
+                                <div class="item ">
+                                    <i class="calendar icon"> </i>2021-9-1
+                                </div>
+                                <!--                                            放观看次数-->
+                                <div class="item ">
+                                    <i class="eye icon"> </i> 1234
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right aligned six wide column">
+                            <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="six wide column">
+                    <a href="#" target="_blank">
+                        <!--                                    800/450为了设置图片大小-->
+                        <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
+                             alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="ui centered  m-margin-top2 segment" style="width: 80%">
+            <div class="ui grid">
+                <div class="ten wide column">
+                    <!--                               文章布局 -->
+                    <h3 class="ui header"><a href="#" target="_blank" style="color: black">你真的理解什么是宇宙吗？</a>
+                    </h3>
+                    <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
+                        开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
+                    <div class="ui  grid">
+                        <div class="ten wide column">
+                            <div class="ui horizontal link list">
+                                <!--                                         放图片-->
+                                <div class="item m-up-NameAndImg">
+                                    <!--                                                ui avatar image用于做圆形图像-->
+                                    <img src="https://picsum.photos/seed/picsum/130/130"
+                                         class="ui avatar image " alt="">
+                                    <div class="content"><a href="#" class="header">孙悦</a></div>
+                                </div>
+
+                                <!--                                            放时间-->
+                                <div class="item ">
+                                    <i class="calendar icon"> </i>2021-9-1
+                                </div>
+                                <!--                                            放观看次数-->
+                                <div class="item ">
+                                    <i class="eye icon"> </i> 1234
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right aligned six wide column">
+                            <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="six wide column">
+                    <a href="#" target="_blank">
+                        <!--                                    800/450为了设置图片大小-->
+                        <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
+                             alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="ui centered  m-margin-top2 segment" style="width: 80%">
+            <div class="ui grid">
+                <div class="ten wide column">
+                    <!--                               文章布局 -->
+                    <h3 class="ui header"><a href="#" target="_blank" style="color: black">你真的理解什么是宇宙吗？</a>
+                    </h3>
+                    <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
+                        开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
+                    <div class="ui  grid">
+                        <div class="ten wide column">
+                            <div class="ui horizontal link list">
+                                <!--                                         放图片-->
+                                <div class="item m-up-NameAndImg">
+                                    <!--                                                ui avatar image用于做圆形图像-->
+                                    <img src="https://picsum.photos/seed/picsum/130/130"
+                                         class="ui avatar image " alt="">
+                                    <div class="content"><a href="#" class="header">孙悦</a></div>
+                                </div>
+
+                                <!--                                            放时间-->
+                                <div class="item ">
+                                    <i class="calendar icon"> </i>2021-9-1
+                                </div>
+                                <!--                                            放观看次数-->
+                                <div class="item ">
+                                    <i class="eye icon"> </i> 1234
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right aligned six wide column">
+                            <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="six wide column">
+                    <a href="#" target="_blank">
+                        <!--                                    800/450为了设置图片大小-->
+                        <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
+                             alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+<!--        分页按钮-->
+        <div class="ui bottom m-margin-top2 attached segment" style="width: 80%">
+            <div class="ui middle aligned  two column grid">
+                <div class="column">
+                    <!--teal basic 把按钮设置为空心和teal色-->
+                    <a href="#" class="ui teal basic mini button">上一页</a>
+                </div>
+                <div class="right aligned column" style="font-size: large ">
+                    <a href="#" class="ui teal basic mini button">下一页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<!--footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <!--            semantic ui 分16份，而bootstrap分12份，一行-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img class="ui rounded image" src="../static/images/wxchat.png" style="width: 110px" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header ">其他平台（me）</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item"><i class=" github icon"></i>&ensp;&ensp;Github</a>
+                    <a href="#" class="item"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+                    <a href="#" class="item"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui inverted header ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:&ensp;1412824257@qq.com</a>
+                    <a href="#" class="item">QQ：&ensp;1412824257</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4 class="ui inverted header ">Monitor</h4>
+                <p id="m-p-mointor">一个人并不是生来要给打败的，你尽可以把他消灭掉，但他的精神是不可战胜的。 ---海明威</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider" style="width: 100% "></div>
+        <p class="m-copyright" style="font-size: medium ">Copyright &ensp; © &ensp;2020-2021 &ensp;|&ensp; Designed
+            By: &ensp;SunYue </p>
+    </div>
+</footer>
+<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+// <!--    二维码弹出-->
+//     $('#payButton').popup({
+//         popup : $('.payQ.popup'),
+//         on: 'click',
+//         position:'top center'
+//     })
+</script>
+</body>
+</html>

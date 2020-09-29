@@ -9,6 +9,9 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class indexController {
@@ -22,7 +25,7 @@ public class indexController {
     private TagService tagService;
 
     @GetMapping("/")
-    public String index(@PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,  Model model)
+    public String index(@PageableDefault(size = 4, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,  Model model)
     {
         model.addAttribute("page",blogService.listBlog(pageable));
         model.addAttribute("types", typeService.listTypeTop(6));
@@ -31,19 +34,25 @@ public class indexController {
         return "index";
     }
 
+    @PostMapping("/search")
+    public String Search(@PageableDefault(size = 3, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, @RequestParam String query, Model model){
 
+        //select * from t_table where title llke "%内容%"
+        model.addAttribute("page",blogService.listBolg("%"+query+"%",pageable));
+        //把查询的字符串返回
+        model.addAttribute("query",query);
+        return "search";
+    }
 
 
     @GetMapping("/flash")
     public String flash(){
         return "flash";
     }
-    @GetMapping("/blog")
-    public String blog(){
-//        String blog =null;
-//        if(blog == null){
-//            throw new NotFoundException("博客不存在");
-//        }
+
+    @GetMapping("/blog/{id}")
+    public String blog(@PathVariable Long id,Model model){
+        model.addAttribute("blog",blogService.getAndConvert(id));
         return "blog";
     }
 }

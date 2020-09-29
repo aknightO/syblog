@@ -42,10 +42,13 @@
                 <a href="#" class="item" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
                 <a href="#" class="item" th:classappend="${n==6} ? 'active'"><i class="location arrow icon"></i>友情链接</a>
                 <!--                transparent是透明的意思-->
-                <div class="ui icon input">
-                    <input type="text" placeholder="搜索">
-                    <i class="search link icon"></i>
-                </div>
+                <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
+                     <div class="ui icon input">
+                         <input type="text" name="query" placeholder="搜索" th:value="${query}">
+                         <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                     </div>
+                </form>
+
             </div>
         </div>
     </div>
@@ -69,9 +72,9 @@
             <div class="three wide column">
                 <h4 class="ui inverted header ">其他平台（me）</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item" target="_blank" th:href="@{https://github.com/aknightO} "><i class=" github icon"></i>&ensp;&ensp;Github</a>
-                    <a href="#" class="item" target="_blank" th:href="@{https://www.zhihu.com/people/sun-yue-92-99-53}"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
-                    <a href="#" class="item" target="_blank" th:href="@{https://weibo.com/u/3860213756/home?wvr=5&sudaref=graph.qq.com}"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+                    <a href="#" class="item" target="_blank" style="text-decoration: none" th:href="@{https://github.com/aknightO} "><i class=" github icon"></i>&ensp;&ensp;Github</a>
+                    <a href="#" class="item" target="_blank" style="text-decoration: none" th:href="@{https://www.zhihu.com/people/sun-yue-92-99-53}"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+                    <a href="#" class="item" target="_blank" style="text-decoration: none" th:href="@{https://weibo.com/u/3860213756/home?wvr=5&sudaref=graph.qq.com}"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
                 </div>
             </div>
 
