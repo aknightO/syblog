@@ -15,6 +15,9 @@ public interface BlogService  {
     //给首页使用于分页
     Page<Blog> listBlog(Pageable pageable);
 
+    //用于标签去查询
+    Page<Blog> listBlog(Long tagId,Pageable pageable);
+
     Blog saveBlog(Blog blog);
 
     Blog updateBlog(Long id,Blog blog);

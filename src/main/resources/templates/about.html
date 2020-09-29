@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <!--    移动端的预览设置-->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,7 +13,7 @@
 <!--导航-->
 <!--说明是一个ui组件，invert反转-->
 <!--navbar-->
-<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
+<nav  th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
     <div class="ui stackable container" id="navContainer">
         <!--            把他设置为一个菜单，下面每一个都是一个item-->
         <div class="ui  inverted secondary menu">
@@ -134,7 +134,7 @@
 <br>
 <br>
 <!--footer-->
-<footer class="ui inverted vertical segment m-padded-tb-massive">
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
         <div class="ui inverted divided grid">
             <!--            semantic ui 分16份，而bootstrap分12份，一行-->
