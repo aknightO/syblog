@@ -1,0 +1,91 @@
+2020-09-30 14:57:26.801  INFO 12860 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Starting SyblogApplicationTests on ¿œ∆ﬂµƒcomputer with PID 12860 (started by ÀÔ‘√ in C:\Users\ÀÔ‘√\Desktop\∫À–ƒ∆™¥˙¬Î\syblog)
+2020-09-30 14:57:26.802 DEBUG 12860 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-30 14:57:26.803  INFO 12860 --- [main] c.sunyue.syblog.SyblogApplicationTests   : The following profiles are active: dev
+2020-09-30 14:57:28.061  INFO 12860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-30 14:57:28.199  INFO 12860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125ms. Found 4 JPA repository interfaces.
+2020-09-30 14:57:29.360  INFO 12860 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-30 14:57:29.552  INFO 12860 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-30 14:57:29.755  INFO 12860 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-30 14:57:30.125  INFO 12860 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-30 14:57:30.424  WARN 12860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-30 14:57:31.767  INFO 12860 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-30 14:57:32.657  INFO 12860 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories°≠
+2020-09-30 14:57:35.795  INFO 12860 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-30 14:57:35.878  INFO 12860 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-30 14:57:38.285  INFO 12860 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-30 14:57:38.295  INFO 12860 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-30 14:57:39.056  INFO 12860 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-30 14:57:39.071  INFO 12860 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Started SyblogApplicationTests in 12.82 seconds (JVM running for 14.252)
+2020-09-30 14:57:39.388  INFO 12860 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-30 14:57:39.390  INFO 12860 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-30 14:57:39.407  INFO 12860 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-30 14:58:43.588  INFO 11052 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Starting SyblogApplicationTests on ¿œ∆ﬂµƒcomputer with PID 11052 (started by ÀÔ‘√ in C:\Users\ÀÔ‘√\Desktop\∫À–ƒ∆™¥˙¬Î\syblog)
+2020-09-30 14:58:43.590 DEBUG 11052 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-30 14:58:43.590  INFO 11052 --- [main] c.sunyue.syblog.SyblogApplicationTests   : The following profiles are active: dev
+2020-09-30 14:58:45.123  INFO 11052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-30 14:58:45.261  INFO 11052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123ms. Found 4 JPA repository interfaces.
+2020-09-30 14:58:46.546  INFO 11052 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-30 14:58:46.816  INFO 11052 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-30 14:58:46.926  INFO 11052 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-30 14:58:47.208  INFO 11052 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-30 14:58:47.466  WARN 11052 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-30 14:58:48.558  INFO 11052 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-30 14:58:49.364  INFO 11052 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories°≠
+2020-09-30 14:58:53.588  INFO 11052 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-30 14:58:53.628  INFO 11052 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-30 14:58:56.071  INFO 11052 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-30 14:58:56.090  INFO 11052 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-30 14:58:57.023  INFO 11052 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-30 14:58:57.039  INFO 11052 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Started SyblogApplicationTests in 13.891 seconds (JVM running for 15.109)
+2020-09-30 14:58:57.297  INFO 11052 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-30 14:58:57.301  INFO 11052 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-30 14:58:57.311  INFO 11052 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-30 15:00:27.161  INFO 2736 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Starting SyblogApplicationTests on ¿œ∆ﬂµƒcomputer with PID 2736 (started by ÀÔ‘√ in C:\Users\ÀÔ‘√\Desktop\∫À–ƒ∆™¥˙¬Î\syblog)
+2020-09-30 15:00:27.162 DEBUG 2736 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-30 15:00:27.163  INFO 2736 --- [main] c.sunyue.syblog.SyblogApplicationTests   : The following profiles are active: dev
+2020-09-30 15:00:28.746  INFO 2736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-30 15:00:29.021  INFO 2736 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 253ms. Found 4 JPA repository interfaces.
+2020-09-30 15:00:30.460  INFO 2736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-30 15:00:30.584  INFO 2736 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-30 15:00:30.710  INFO 2736 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-30 15:00:31.039  INFO 2736 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-30 15:00:31.360  WARN 2736 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-30 15:00:32.034  INFO 2736 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-30 15:00:32.640  INFO 2736 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories°≠
+2020-09-30 15:00:36.009  INFO 2736 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-30 15:00:36.051  INFO 2736 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-30 15:00:38.270  INFO 2736 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-30 15:00:38.281  INFO 2736 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-30 15:00:38.983  INFO 2736 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-30 15:00:38.991  INFO 2736 --- [main] c.sunyue.syblog.SyblogApplicationTests   : Started SyblogApplicationTests in 12.309 seconds (JVM running for 13.518)
+2020-09-30 15:00:39.152  INFO 2736 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-30 15:00:39.154  INFO 2736 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-30 15:00:39.165  INFO 2736 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-09-30 16:38:06.508  INFO 800 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication on ËÄÅ‰∏ÉÁöÑcomputer with PID 800 (C:\Users\Â≠ôÊÇ¶\Desktop\Ê†∏ÂøÉÁØá‰ª£Á†Å\syblog\target\classes started by Â≠ôÊÇ¶ in C:\Users\Â≠ôÊÇ¶\Desktop\Ê†∏ÂøÉÁØá‰ª£Á†Å\syblog)
+2020-09-30 16:38:06.512 DEBUG 800 --- [main] com.sunyue.syblog.SyblogApplication      : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-30 16:38:06.513  INFO 800 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: dev
+2020-09-30 16:38:07.605  INFO 800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-30 16:38:07.717  INFO 800 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103ms. Found 4 JPA repository interfaces.
+2020-09-30 16:38:08.471  INFO 800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-30 16:38:08.482  INFO 800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-30 16:38:08.482  INFO 800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-30 16:38:08.484  INFO 800 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-30 16:38:08.484  INFO 800 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-30 16:38:08.484  INFO 800 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-30 16:38:08.488  INFO 800 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-30 16:38:08.604  INFO 800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-30 16:38:08.604  INFO 800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1881 ms
+2020-09-30 16:38:09.020  INFO 800 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-30 16:38:09.080  INFO 800 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-30 16:38:09.130  INFO 800 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-30 16:38:09.207  WARN 800 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-30 16:38:09.281  INFO 800 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-30 16:38:09.563  INFO 800 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-30 16:38:09.899  INFO 800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-30 16:38:09.901  INFO 800 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories‚Ä¶
+2020-09-30 16:38:12.869  INFO 800 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-30 16:38:12.886  INFO 800 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-30 16:38:14.728  INFO 800 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-30 16:38:14.736  INFO 800 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-30 16:38:15.416  INFO 800 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-30 16:38:15.423  INFO 800 --- [main] com.sunyue.syblog.SyblogApplication      : Started SyblogApplication in 9.465 seconds (JVM running for 11.352)

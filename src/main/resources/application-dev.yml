@@ -46,4 +46,4 @@ logging:
     name: log/blog-dev.log
 #开发环境下端口
 server:
-  port: 8080
+  port: 80
