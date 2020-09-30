@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
     <meta charset="UTF-8">
     <!--    移动端的预览设置-->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,7 +13,7 @@
 <!--导航-->
 <!--说明是一个ui组件，invert反转-->
 <!--navbar-->
-<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
+<nav th:replace="_fragments :: menu(4)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
     <div class="ui stackable container" id="navContainer">
         <!--            把他设置为一个菜单，下面每一个都是一个item-->
         <div class="ui  inverted secondary menu">
@@ -47,25 +47,27 @@
             <!--  middle aligned垂直方向剧中-->
             <div class="ui middle aligned two column grid">
                 <div class="column">
-                    <h3 class="ui teal header" style="font-size: 25px">分类</h3>
+                    <h3 class="ui teal header" style="font-size: 25px">归档</h3>
                 </div>
                 <div class="right aligned column" style="font-size: 25px ">
-                    共<h3 class="ui orange header m-inline-block ">10</h3>篇博客
+                    共<h3 class="ui orange header m-inline-block " th:text="${blogCount}">10</h3>篇博客
                 </div>
             </div>
         </div>
 
 <!--        2020年博客归档-->
-        <h3 class="ui centered header">2020年</h3>
-        <div class="ui fluid vertical m-padded-tb-mini2 menu">
-            <a href="#" target="_blank" class="m-text item">
+        <th:block th:each="item : ${archiveMap }">
+        <h3 class="ui centered header" th:text="${item.key}">2020 <span>年</span></h3>
+        <div class="ui fluid vertical m-padded-tb-mini2 menu" th:each="blog :${item.value}">
+            <a href="#" target="_blank" class="m-text item" th:href="@{/blog/{id}(id = ${blog.id})}">
 <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
                 <span>
-                     <i class="circle teal icon"></i>关于可以练习的清单
-                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
+                     <i class="circle teal icon"></i><span th:text="${blog.title}">关于可以练习的清单</span>
+                    <div class="ui teal basic left pointing m-padded-tb-mini1 label" th:text="${#dates.format(blog.updateTime,'MMMdd')}">9月2日</div>
                 </span>
-                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
+                <div class="ui orange basic m-padded-tb-mini2 label" th:value="${blog.flag}">原创</div>
             </a>
+            <!--/*-->
             <a href="#" target="_blank" class="m-text item">
                 <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
                 <span>
@@ -74,62 +76,9 @@
                 </span>
                 <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
             </a>
-            <a href="#" target="_blank" class="m-text item">
-                <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
-                <span>
-                     <i class="circle teal icon"></i>关于可以练习的清单
-                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
-                </span>
-                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
-            </a>
-            <a href="#" target="_blank" class="m-text item">
-                <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
-                <span>
-                     <i class="circle teal icon"></i>关于可以练习的清单
-                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
-                </span>
-                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
-            </a>
+            <!--*/-->
         </div>
-
-        <!--        2019年博客归档-->
-        <h3 class="ui centered header">2019年</h3>
-        <div class="ui fluid vertical m-padded-tb-mini2 menu">
-            <a href="#" target="_blank" class="m-text item">
-                <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
-                <span>
-                     <i class="circle teal icon"></i>关于可以练习的清单
-                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
-                </span>
-                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
-            </a>
-            <a href="#" target="_blank" class="m-text item">
-                <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
-                <span>
-                     <i class="circle teal icon"></i>关于可以练习的清单
-                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
-                </span>
-                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
-            </a>
-            <a href="#" target="_blank" class="m-text item">
-                <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
-                <span>
-                     <i class="circle teal icon"></i>关于可以练习的清单
-                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
-                </span>
-                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
-            </a>
-            <a href="#" target="_blank" class="m-text item">
-                <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
-                <span>
-                     <i class="circle teal icon"></i>关于可以练习的清单
-                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
-                </span>
-                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
-            </a>
-        </div>
-
-
+        </th:block>
 <!--        ui.container的div-->
     </div>
 </div>
@@ -139,7 +88,7 @@
 <br>
 <br>
 <!--footer-->
-<footer class="ui inverted vertical segment m-padded-tb-massive">
+<footer  th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
         <div class="ui inverted divided grid">
             <!--            semantic ui 分16份，而bootstrap分12份，一行-->

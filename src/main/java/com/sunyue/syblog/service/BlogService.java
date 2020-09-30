@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BlogService  {
     Blog getBlog(Long id);
@@ -31,4 +32,8 @@ public interface BlogService  {
 
     //把markdown查询和转换html
     Blog getAndConvert(Long id);
+
+    //归档
+    Map<String,List<Blog>> archiveBlog();
+    Long count();//获取归档条数
 }

@@ -38,7 +38,7 @@
                 <a href="#" th:href="@{/}" class="item" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
                 <a href="#" th:href="@{/tags/-1}" class="item" th:classappend="${n==2} ? 'active'"><i class="tags icon"></i>标签</a>
                 <a href="#" th:href="@{/types/-1}" class="item" th:classappend="${n==3} ? 'active'"><i class="idea icon"></i>分类</a>
-                <a href="#" th:href="@{/archives/-1}" class="item" th:classappend="${n==4} ? 'active'"><i class="chevron down icon"></i>归档</a>
+                <a href="#" th:href="@{/archives}" class="item" th:classappend="${n==4} ? 'active'"><i class="chevron down icon"></i>归档</a>
                 <a href="#" th:href="@{/about}" class="item" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
                 <a href="#" th:href="@{https://sunhwee.com/friends}" class="item" th:classappend="${n==6} ? 'active'"><i class="location arrow icon"></i>友情链接</a>
                 <!--                transparent是透明的意思-->
@@ -116,7 +116,5 @@
 <!--   樱花飘落 -->
     <script type="text/javascript" src="../static/js/hm.js"  th:href="@{/js/hm.js}"></script>
 </th:block>
-
-
 
 </html>

@@ -60,4 +60,5 @@ public class indexController {
     public String about(){
         return "about";
     }
+
 }

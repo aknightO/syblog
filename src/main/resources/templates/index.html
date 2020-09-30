@@ -139,100 +139,6 @@
                         </div>
                     </div>
                 </div>
-                    <!--/*-->
-                    <div class="ui padded  segment  m-padded-top">
-<!--                        middle aligned为了图片垂直居中-->
-                        <div class="ui middle aligned grid ">
-                            <div class="ten wide column">
-                                <!--                               文章布局 -->
-                                <h3 class="ui header"><a href="#" target="_blank"
-                                                         style="color: black">你真的理解什么是宇宙吗？</a>
-                                </h3>
-                                <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
-                                    开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
-                                <div class="ui grid">
-                                    <div class="ten wide column">
-                                        <div class="ui  horizontal link list">
-                                            <!-- 放图片-->
-                                            <div class="item m-up-NameAndImg">
-                                                <!--                                                ui avatar image用于做圆形图像-->
-                                                <img src="https://picsum.photos/seed/picsum/130/130"
-                                                     class="ui avatar image " alt="">
-                                                <div class="content"><a href="#" class="header">孙悦</a></div>
-                                            </div>
-                                            <!-- 放时间-->
-                                            <div class="item ">
-                                                <i class="calendar icon"> </i>2021-9-1
-                                            </div>
-                                            <!--放观看次数-->
-                                            <div class="item ">
-                                                <i class="eye icon"> </i> 1234
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned six wide column">
-                                        <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="six wide column">
-                                <a href="#" target="_blank">
-                                    <!--                                    800/450为了设置图片大小-->
-                                    <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
-                                         alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ui padded  segment  m-padded-top">
-                        <!--                        middle aligned为了图片垂直居中-->
-                        <div class="ui middle aligned grid ">
-                            <div class="ten wide column">
-                                <!--                               文章布局 -->
-                                <h3 class="ui header"><a href="#" target="_blank"
-                                                         style="color: black">你真的理解什么是宇宙吗？</a>
-                                </h3>
-                                <p class="m-text">Webstorm快捷键与设置 WebStorm 是jetbrains公司旗下一款JavaScript
-                                    开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的...</p>
-                                <div class="ui grid">
-                                    <div class="ten wide column">
-                                        <div class="ui  horizontal link list">
-                                            <!-- 放图片-->
-                                            <div class="item m-up-NameAndImg">
-                                                <!--                                                ui avatar image用于做圆形图像-->
-                                                <img src="https://picsum.photos/seed/picsum/130/130"
-                                                     class="ui avatar image " alt="">
-                                                <div class="content"><a href="#" class="header">孙悦</a></div>
-                                            </div>
-                                            <!-- 放时间-->
-                                            <div class="item ">
-                                                <i class="calendar icon"> </i>2021-9-1
-                                            </div>
-                                            <!--放观看次数-->
-                                            <div class="item ">
-                                                <i class="eye icon"> </i> 1234
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right aligned six wide column">
-                                        <a href="#" target="_blank" class="ui teal basic mini label">认知升级</a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="six wide column">
-                                <a href="#" target="_blank">
-                                    <!--                                    800/450为了设置图片大小-->
-                                    <img src="https://picsum.photos/seed/picsum/800/450" class="ui rounded image "
-                                         alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--*/-->
 
                 </div>
                 <!--    footer-->
@@ -261,7 +167,7 @@
                                 <i class="idea icon"></i>分类
                             </div>
                             <div class=" right aligned column">
-                                <a href="#" target="_blank"> more <i class="angle double right icon"></i></a>
+                                <a href="#" target="_blank" style="text-decoration: none" th:href="@{/types/-1}" > more <i class="angle double right icon"></i></a>
                             </div>
                         </div>
                     </div>
@@ -269,7 +175,7 @@
                         <!--                        做竖着的列表，剋以使用menu,fluid是填充这个容器-->
                         <div class="ui fluid vertical menu" >
                             <div class="ui item" th:each="type : ${types}">
-                                <a href="#" target="_blank" style="text-decoration: none" ><span th:text="${type.name}">学习日志</span></a>
+                                <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" style="text-decoration: none" ><span th:text="${type.name}">学习日志</span></a>
                                 <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">13</div>
                             </div>
                             <!--/*-->
@@ -280,21 +186,6 @@
                             </div>
                             <div class="ui item">
                                 <a href="#" target="_blank">前端
-                                </a>
-                                <div class="ui teal basic left pointing label">13</div>
-                            </div>
-                            <div class="ui item">
-                                <a href="#" target="_blank">Springoot
-                                </a>
-                                <div class="ui teal basic left pointing label">13</div>
-                            </div>
-                            <div class="ui item">
-                                <a href="#" target="_blank">生活
-                                </a>
-                                <div class="ui teal basic left pointing label">13</div>
-                            </div>
-                            <div class="ui item">
-                                <a href="#" target="_blank">Mybitis
                                 </a>
                                 <div class="ui teal basic left pointing label">13</div>
                             </div>
@@ -311,24 +202,15 @@
                                 <i class="tags icon"></i>标签
                             </div>
                             <div class=" right aligned column">
-                                <a href="#" target="_blank" style="text-decoration: none"> more <i class="angle double right icon"></i></a>
+                                <a href="#"  target="_blank" style="text-decoration: none" th:href="@{/tags/-1}"> more <i class="angle double right icon"></i></a>
                             </div>
                         </div>
                         <div class="ui teal segment">
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top" th:each="tag :${tags}">
+                            <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui teal basic left pointing label m-margin-top" th:each="tag :${tags}">
                                 <span th:text="${tag.name}">方法论</span>
                                 <div class="detail" th:text="${#arrays.length(tag.blogs)}"> 23</div>
                             </a>
                             <!--/*-->
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
-                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
-                                <div class="detail"> 23</div>
-                            </a>
                             <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-top">方法论
                                 <div class="detail"> 23</div>
                             </a>
