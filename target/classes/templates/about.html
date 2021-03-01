@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--    移动端的预览设置-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>归档</title>
+    <link rel="stylesheet" href="../static/css/me.css">
+
+</head>
+<body>
+<!--导航-->
+<!--说明是一个ui组件，invert反转-->
+<!--navbar-->
+<nav  th:replace="_fragments :: menu(5)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
+    <div class="ui stackable container" id="navContainer">
+        <!--            把他设置为一个菜单，下面每一个都是一个item-->
+        <div class="ui  inverted secondary menu">
+            <div class="brand-logo">
+                <a class="waves-effect waves-light " href=""></a>
+                <!--                 需要设置logo字体大小-->
+                <span class=" ui teal header item m-logo-text"> SyBlog</span>
+            </div>
+            <!--            stackable是可堆叠的意思-->
+            <div class="right  item m-padded-link-right">
+                <a href="#" class="item"><i class="home icon"></i>首页</a>
+                <a href="#" class="item"><i class="tags icon"></i>标签</a>
+                <a href="#" class="item"><i class="idea icon"></i>分类</a>
+                <a href="#" class="item"><i class="chevron down icon"></i>归档</a>
+                <a href="#" class="item"><i class="info icon"></i>关于我</a>
+                <a href="#" class="item"><i class="location arrow icon"></i>友情链接</a>
+                <!--                transparent是透明的意思-->
+                <div class="ui icon input">
+                    <input type="text" placeholder="搜索">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--中间内容-->
+<div class="m-padded-tb-large">
+    <div class="ui container">
+<!--        stackable移动端可堆叠-->
+        <div class="ui stackable grid">
+            <div class="ui ten wide column">
+                <div class="ui segment">
+                    <img src="https://unsplash.it/800/600?image=1006" alt="" class="ui rounded image">
+                </div>
+            </div>
+            <div class="ui five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui centered header">关于我</div>
+                </div>
+                <div class="ui  attached segment">
+                    <p class="m-text1">&nbsp;&nbsp;孙悦，一个热爱技术，喜欢开发不同的有意思的程序java的后端程序员，总的来说，因为喜欢，所以追求更好！</p>
+                    <p class="m-text1">&nbsp;&nbsp;热爱编程，追求效率！^-^</p>
+                </div>
+                <!--              爱好-->
+                <div class="ui  attached segment">
+                    <div class="ui orange  basic label">
+                        <i class="ui edit  icon"></i>学习
+                    </div>
+                    <div class="ui orange  basic label">
+                        <i class="ui basketball ball  icon"></i>健身
+                    </div>
+                    <div class="ui orange  basic label">
+                        <i class="ui bug icon"></i>编程
+                    </div>
+                    <div class="ui orange  basic label">
+                        <i class="ui coffee  icon"></i>......
+                    </div>
+                </div>
+                <!--              技术-->
+                <div class="ui  attached  segment">
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        java
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        semantic ui
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        mysql
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        html+js+css
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        docker
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        spring
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        maven
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        springboot
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        设计模式
+                    </div>
+                    <div class="ui teal basic left pointing m-margin-top3 label">
+                        jpa+mybatis+Druid
+                    </div>
+                </div>
+                <!--              联系我-->
+                <div class="ui bottom attached segment">
+                    <a href="https://github.com/aknightO?tab=repositories" target="_blank" class="ui circular icon button"><i class="github icon"></i></a>
+                    <!--  wechat定义一个类，用于微信二维码弹出-->
+                    <a href="#" target="_blank" class="ui wechat circular icon button"><i class="qq icon"></i></a>
+                    <!-- qq定义一个类，用于qq二维码弹出-->
+                    <a href="#" target="_blank" class="ui qq circular icon button"><i class="wechat icon"></i></a>
+                </div>
+
+                <div class="ui wechat-qr flowing popup transition hidden">
+                    <img src="../static/images/wxchat.png" alt="" th:src="@{/images/wxchat.png}" class="ui rounded image" style="width: 130px">
+                </div>
+                <div class="ui qq-qr flowing popup transition hidden">
+                    <img src="../static/images/qq.png" th:src="@{/images/qq.png}" alt="" class="ui rounded image" style="width: 130px">
+                </div>
+
+
+
+            </div>
+        </div>
+        <!--        ui.container的div-->
+    </div>
+</div>
+
+</div>
+<br>
+<br>
+<br>
+<!--footer-->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <!--            semantic ui 分16份，而bootstrap分12份，一行-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img class="ui rounded image" src="../static/images/wxchat.png" style="width: 110px" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header ">其他平台（me）</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item"><i class=" github icon"></i>&ensp;&ensp;Github</a>
+                    <a href="#" class="item"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+                    <a href="#" class="item"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui inverted header ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:&ensp;1412824257@qq.com</a>
+                    <a href="#" class="item">QQ：&ensp;1412824257</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4 class="ui inverted header ">Monitor</h4>
+                <p id="m-p-mointor">一个人并不是生来要给打败的，你尽可以把他消灭掉，但他的精神是不可战胜的。 ---海明威</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider" style="width: 100% "></div>
+        <p class="m-copyright" style="font-size: medium ">Copyright &ensp; © &ensp;2020-2021 &ensp;|&ensp; Designed
+            By: &ensp;SunYue </p>
+    </div>
+</footer>
+<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    // <!--    二维码弹出-->
+    //     $('#payButton').popup({
+    //         popup : $('.payQ.popup'),
+    //         on: 'click',
+    //         position:'top center'
+    //     })
+    <!--    微信二维码弹出-->
+        $('.wechat').popup({
+            popup : $('.wechat-qr.popup'),
+            position:'top center'
+        })
+    <!--    qq二维码弹出-->
+    $('.qq').popup({
+        popup : $('.qq-qr.popup'),
+        position:'top center'
+    })
+</script>
+</body>
+</html>

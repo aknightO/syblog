@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://www.sylog.top:3307/syblog?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SE LECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#建表语句，用于datasourceinitializer：applicationlistener去监听建表runschmescript
+# 表建好后就可以注释掉了
+#    schema:
+#      - classpath:sql/department.sql
+#      - classpath:sql/employee.sql
+#       2版本以后initialization-mode这句话一定要加
+    initialization-mode: ALWAYS
+#    配置jpa
+  jpa:
+    hibernate:
+      #ddl-auto自动更新表结构
+      ddl-auto: update
+      #语句输出到日志做准备
+    show-sql: true
+
+#配置日志
+logging:
+  level:
+    root : info
+    com.sunyue.syblog: debug
+  file:
+    name: log/blog-dev.log
+#开发环境下端口
+server:
+  port: 80

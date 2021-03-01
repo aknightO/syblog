@@ -1,0 +1,74 @@
+2020-10-25 12:28:05.181  INFO 6532 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication v0.0.1-SNAPSHOT on ÀÏÆßµÄcomputer with PID 6532 (C:\Users\ËïÔÃ\Desktop\ºËÐÄÆª´úÂë\syblog\target\syblog-0.0.1-SNAPSHOT.jar started by ËïÔÃ in C:\Users\ËïÔÃ\Desktop\ºËÐÄÆª´úÂë\syblog\target)
+2020-10-25 12:28:05.185 DEBUG 6532 --- [main] com.sunyue.syblog.SyblogApplication      : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-10-25 12:28:05.185  INFO 6532 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: dev
+2020-10-25 12:28:08.591  INFO 6532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-25 12:28:09.013  INFO 6532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 403ms. Found 4 JPA repository interfaces.
+2020-10-25 12:28:11.160  INFO 6532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-10-25 12:28:11.252  INFO 6532 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-25 12:28:11.252  INFO 6532 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-10-25 12:28:11.255  INFO 6532 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-10-25 12:28:11.255  INFO 6532 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-10-25 12:28:11.255  INFO 6532 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-10-25 12:28:11.259  INFO 6532 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-10-25 12:28:11.481  INFO 6532 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-25 12:28:11.481  INFO 6532 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6117 ms
+2020-10-25 12:28:12.426  INFO 6532 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-25 12:28:12.748  INFO 6532 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-25 12:28:13.238  WARN 6532 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-25 12:28:13.524  INFO 6532 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-10-25 12:28:13.969  INFO 6532 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-25 12:28:14.455  INFO 6532 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-25 12:28:15.996  INFO 6532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-10-25 12:28:16.017  INFO 6532 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-10-25 12:28:20.139  INFO 6532 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-10-25 12:28:20.348  INFO 6532 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-25 12:28:23.637  INFO 6532 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-25 12:28:23.653  INFO 6532 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-25 12:28:24.679  INFO 6532 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-25 12:28:24.698  INFO 6532 --- [main] com.sunyue.syblog.SyblogApplication      : Started SyblogApplication in 20.986 seconds (JVM running for 22.182)
+2020-10-25 12:29:28.131  INFO 9148 --- [main] com.sunyue.syblog.SyblogApplication      : Starting SyblogApplication v0.0.1-SNAPSHOT on ÀÏÆßµÄcomputer with PID 9148 (C:\Users\ËïÔÃ\Desktop\ºËÐÄÆª´úÂë\syblog\target\syblog-0.0.1-SNAPSHOT.jar started by ËïÔÃ in C:\Users\ËïÔÃ\Desktop\ºËÐÄÆª´úÂë\syblog\target)
+2020-10-25 12:29:28.134 DEBUG 9148 --- [main] com.sunyue.syblog.SyblogApplication      : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-10-25 12:29:28.136  INFO 9148 --- [main] com.sunyue.syblog.SyblogApplication      : The following profiles are active: dev
+2020-10-25 12:29:31.462  INFO 9148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-25 12:29:31.885  INFO 9148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 404ms. Found 4 JPA repository interfaces.
+2020-10-25 12:29:33.937  INFO 9148 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-10-25 12:29:34.026  INFO 9148 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-25 12:29:34.027  INFO 9148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-10-25 12:29:34.029  INFO 9148 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-10-25 12:29:34.029  INFO 9148 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-10-25 12:29:34.029  INFO 9148 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-10-25 12:29:34.033  INFO 9148 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-10-25 12:29:34.253  INFO 9148 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-25 12:29:34.253  INFO 9148 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5944 ms
+2020-10-25 12:29:35.125  INFO 9148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-25 12:29:35.435  INFO 9148 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-25 12:29:35.836  WARN 9148 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-25 12:29:36.097  INFO 9148 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-10-25 12:29:36.445  INFO 9148 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-25 12:29:36.769  INFO 9148 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-25 12:29:37.305  WARN 9148 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 80 is already in use
+2020-10-25 12:29:37.312  INFO 9148 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-25 12:29:40.515  INFO 9148 --- [task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-10-25 12:29:40.624  INFO 9148 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-10-25 12:29:43.597  INFO 9148 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-25 12:29:43.617  INFO 9148 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-25 12:29:43.624  INFO 9148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-25 12:29:43.642  INFO 9148 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-10-25 12:29:43.645  INFO 9148 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-10-25 12:29:43.659  INFO 9148 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-10-25 12:29:43.663 ERROR 9148 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 80 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 80 or configure this application to listen on another port.
+

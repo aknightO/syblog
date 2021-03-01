@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--    移动端的预览设置-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>归档</title>
+    <link rel="stylesheet" href="../static/css/me.css">
+
+</head>
+<body>
+<!--导航-->
+<!--说明是一个ui组件，invert反转-->
+<!--navbar-->
+<nav th:replace="_fragments :: menu(4)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" id="headNav">
+    <div class="ui stackable container" id="navContainer">
+        <!--            把他设置为一个菜单，下面每一个都是一个item-->
+        <div class="ui  inverted secondary menu">
+            <div class="brand-logo">
+                <a class="waves-effect waves-light " href=""></a>
+                <!--                 需要设置logo字体大小-->
+                <span class=" ui teal header item m-logo-text"> SyBlog</span>
+            </div>
+            <!--            stackable是可堆叠的意思-->
+            <div class="right  item m-padded-link-right">
+                <a href="#" class="item"><i class="home icon"></i>首页</a>
+                <a href="#" class="item"><i class="tags icon"></i>标签</a>
+                <a href="#" class="item"><i class="idea icon"></i>分类</a>
+                <a href="#" class="item"><i class="chevron down icon"></i>归档</a>
+                <a href="#" class="item"><i class="info icon"></i>关于我</a>
+                <a href="#" class="item"><i class="location arrow icon"></i>友情链接</a>
+                <!--                transparent是透明的意思-->
+                <div class="ui icon input">
+                    <input type="text" placeholder="搜索">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--中间内容-->
+<div class="m-padded-tb-large">
+    <div class="ui container">
+        <!--        header-->
+        <div class="ui top attached padded m-padded-tb-mid segment">
+            <!--  middle aligned垂直方向剧中-->
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <h3 class="ui teal header" style="font-size: 25px">归档</h3>
+                </div>
+                <div class="right aligned column" style="font-size: 25px ">
+                    共<h3 class="ui orange header m-inline-block " th:text="${blogCount}">10</h3>篇博客
+                </div>
+            </div>
+        </div>
+
+<!--        2020年博客归档-->
+        <th:block th:each="item : ${archiveMap }">
+        <h3 class="ui centered header" th:text="${item.key}">2020 <span>年</span></h3>
+        <div class="ui fluid vertical m-padded-tb-mini2 menu" th:each="blog :${item.value}">
+            <a href="#" target="_blank" class="m-text item" th:href="@{/blog/{id}(id = ${blog.id})}">
+<!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
+                <span>
+                     <i class="circle teal icon"></i><span th:text="${blog.title}">关于可以练习的清单</span>
+                    <div class="ui teal basic left pointing m-padded-tb-mini1 label" th:text="${#dates.format(blog.updateTime,'MMMdd')}">9月2日</div>
+                </span>
+                <div class="ui orange basic m-padded-tb-mini2 label" th:value="${blog.flag}">原创</div>
+            </a>
+            <!--/*-->
+            <a href="#" target="_blank" class="m-text item">
+                <!--                item里面的元素会一左一右的分开，所以span和原创的table会分开-->
+                <span>
+                     <i class="circle teal icon"></i>关于可以练习的清单
+                    <div class="ui teal basic left pointing m-padded-tb-mini1 label">9月2日</div>
+                </span>
+                <div class="ui orange basic m-padded-tb-mini2 label">原创</div>
+            </a>
+            <!--*/-->
+        </div>
+        </th:block>
+<!--        ui.container的div-->
+    </div>
+</div>
+
+</div>
+<br>
+<br>
+<br>
+<!--footer-->
+<footer  th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided grid">
+            <!--            semantic ui 分16份，而bootstrap分12份，一行-->
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img class="ui rounded image" src="../static/images/wxchat.png" style="width: 110px" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header ">其他平台（me）</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item"><i class=" github icon"></i>&ensp;&ensp;Github</a>
+                    <a href="#" class="item"><i class=" clone icon"></i>&ensp;&ensp;ZhiHu</a>
+                    <a href="#" class="item"><i class="weibo icon"></i>&ensp;&ensp; Weibo</a>
+                </div>
+            </div>
+
+            <div class="four wide column">
+                <h4 class="ui inverted header ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:&ensp;1412824257@qq.com</a>
+                    <a href="#" class="item">QQ：&ensp;1412824257</a>
+                </div>
+            </div>
+
+            <div class="six wide column">
+                <h4 class="ui inverted header ">Monitor</h4>
+                <p id="m-p-mointor">一个人并不是生来要给打败的，你尽可以把他消灭掉，但他的精神是不可战胜的。 ---海明威</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider" style="width: 100% "></div>
+        <p class="m-copyright" style="font-size: medium ">Copyright &ensp; © &ensp;2020-2021 &ensp;|&ensp; Designed
+            By: &ensp;SunYue </p>
+    </div>
+</footer>
+<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+// <!--    二维码弹出-->
+//     $('#payButton').popup({
+//         popup : $('.payQ.popup'),
+//         on: 'click',
+//         position:'top center'
+//     })
+</script>
+</body>
+</html>

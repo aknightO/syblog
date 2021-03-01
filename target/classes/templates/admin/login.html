@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/_fragments::head(~{::title})">
+    <meta charset="UTF-8">
+    <!--    移动端的预览设置-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title>博客管理登录</title>
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
+
+
+</head>
+<body >
+<div class="m-margin-top4" style="width: 28%">
+    <div class="ui container">
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h2 class="ui teal rounded image header">
+                    <img src="https://unsplash.it/100/100?image=1005" class="ui avatar image">
+                    <div class="content">
+                        后台管理登录
+                    </div>
+                </h2>
+                <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
+                    <div class="ui  segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="username" placeholder="用户名">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" placeholder="密码">
+                            </div>
+                        </div>
+                        <button class="ui fluid large teal submit button">登录</button>
+                    </div>
+                    <div class="ui error message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>-->
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+<script>
+
+</script>
+</body>
+</html>
