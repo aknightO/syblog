@@ -6,22 +6,22 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
-#    initialSize: 5
-#    minIdle: 5
-#    maxActive: 20
-#    maxWait: 60000
-#    timeBetweenEvictionRunsMillis: 60000
-#    minEvictableIdleTimeMillis: 300000
-#    validationQuery: SE LECT 1 FROM DUAL
-#    testWhileIdle: true
-#    testOnBorrow: false
-#    testOnReturn: false
-#    poolPreparedStatements: true
-#    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
-#    filters: stat,wall,log4j
-#    maxPoolPreparedStatementPerConnectionSize: 20
-#    useGlobalDataSourceStat: true
-#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SE LECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 #建表语句，用于datasourceinitializer：applicationlistener去监听建表runschmescript
 # 表建好后就可以注释掉了
 #    schema:
